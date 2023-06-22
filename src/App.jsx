@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Carousel from './components/Carousel/Carousel';
 import Banner from './components/Banner/Banner';
 import BannerTwo from './components/Banner/BannerTwo';
+import AppSection from './components/Section/AppSection';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <Carousel/>
               <Banner />
               <BannerTwo/>
+              <AppSection/>
             </>
           }/>
         </Routes>
