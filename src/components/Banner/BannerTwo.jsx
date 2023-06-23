@@ -1,6 +1,6 @@
 const BannerTwo = () => {
     return (
-        <div className="p-4 md:p-8">
+        <div className="p-4 md:p-8 max-w-[1200px] mx-auto">
             <div className="bg-black rounded-[2rem] md:rounded-[4rem] p-8 sm:flex sm:items-center md:p-12 sm:justify-center">
                 <div className="md:w-6/12">
                     <h1 className="text-white text-3xl mb-4 lg:text-6xl md:mb-8">Why are we different?</h1>

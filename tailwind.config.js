@@ -1,15 +1,19 @@
+/* eslint-disable no-undef */
+const flowbite = require('flowbite/plugin');
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
       keyframes: {
         aparecer: {
           '0%': {
-            transform: 'translateY(-50%)'
+            transform: 'translateY(-50%)',
           },
           '100%': {
             transform: 'translateY(0%)'
@@ -17,10 +21,12 @@ export default {
         }
       },
       animation: {
-        aparecer: 'aparecer 1s ease-in-out',
+        aparecer: 'aparecer 400ms ease-in-out',
       }
     }
   },
-  plugins: [],
+  plugins: [
+    flowbite
+  ],
 }
 

@@ -5,6 +5,8 @@ import Carousel from './components/Carousel/Carousel';
 import Banner from './components/Banner/Banner';
 import BannerTwo from './components/Banner/BannerTwo';
 import AppSection from './components/Section/AppSection';
+import Pricing from './components/Pricing/Pricing';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
               <Banner />
               <BannerTwo/>
               <AppSection/>
+              <Pricing/>
+              <Footer/>
             </>
           }/>
         </Routes>
