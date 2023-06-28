@@ -1,24 +1,29 @@
 // eslint-disable-next-line no-unused-vars
 import { Carousel } from 'flowbite';
+import item1 from '../../assets/Carrusel/item1.jpeg'
+import item2 from '../../assets/Carrusel/item2.webp'
+import item3 from '../../assets/Carrusel/item3.jpg'
+import item4 from '../../assets/Carrusel/item4.jpg'
+import item5 from '../../assets/Carrusel/item5.jpg'
 
 const Carrusel = () => {
     return (
         <div id="indicators-carousel" className="relative w-full" data-carousel="slide">
             <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
                 <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="https://d2t8ibj155k5h1.cloudfront.net/fit-in/1200x630/licorerias.com.pe.banner.png" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+                    <img src={item1} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
                 </div>
                 <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://thumbs.dreamstime.com/b/vidrio-de-tiro-congelado-con-an%C3%ADs-estrella-canela-naranja-licor-hierbas-en-un-fondo-oscuro-catering-banner-men%C3%BA-receta-lugar-210567828.jpg?w=1600" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+                    <img src={item2} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
                 </div>
                 <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://revistaelconocedor.com/wp-content/uploads/2017/02/coct-1024x640.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+                    <img src={item3} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
                 </div>
                 <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://www.comunicare.es/wp-content/uploads/2020/10/bebidas-alcoholicas.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+                    <img src={item4} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
                 </div>
                 <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://media.scoolinary.app/blog/images/2022/07/Hardeep_IVI9046.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+                    <img src={item5} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
                 </div>
             </div>
             <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
