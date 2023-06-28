@@ -1,6 +1,7 @@
 import './Navbar.css'
 import { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom';
+import Logo from '../../assets/Logo.png'
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
           <li><NavLink to={'/contacto'}>Contacto</NavLink></li>
         </ul>
         <Link to={'/'}>
-          <img src="../../assets/Logo.png" className='h-14 lg:block' alt="" />
+          <img src={Logo} className='h-14 lg:block' alt="" />
         </Link>
         <div className="flex items-center gap-4">
           <button type="button" className="relative inline-flex items-center py-2.5 text-sm font-medium text-center cursor-pointer">
