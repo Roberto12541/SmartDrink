@@ -11,6 +11,9 @@ import Team from './components/Section/Team';
 import NoFound from './components/Section/NoFound';
 import Promo from './components/Section/Promo';
 import Contacto from './components/Section/Contacto';
+import Service from './components/Section/Service';
+import Steps from './components/Section/Steps';
+// import AppSectionTwo from './components/Section/AppSectionTwo';
 // import Galery from './components/Galery/Galery';
 
 function App() {
@@ -34,6 +37,8 @@ function App() {
           <Route path='/servicios' element={
             <>
               
+              <Service/>
+              <Steps/>
               <Footer/>
             </>
           }/>
