@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import Team from './components/Section/Team';
 import NoFound from './components/Section/NoFound';
 import Promo from './components/Section/Promo';
+import Contacto from './components/Section/Contacto';
 // import Galery from './components/Galery/Galery';
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
           <Route path='/contacto' element={
             <>
               
+              <Contacto/>
+              <Team/>
+              <AppSection/>
               <Footer/>
             </>
           }/>

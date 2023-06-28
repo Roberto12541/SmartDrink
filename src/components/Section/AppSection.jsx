@@ -1,3 +1,5 @@
+import AppModelo from '../../assets/AppModelo.jpg'
+
 const AppSection = () => {
     return (
         <section className="text-gray-600 body-font max-w-[1200px] mx-auto">
@@ -31,15 +33,9 @@ const AppSection = () => {
                     <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg" />
                     <div className="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg" />
                     <div className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
-                        <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-2-light.png" className="dark:hidden w-[272px] h-[572px]" alt="" />
-                        <img src="../src/assets/Mockup.png" className="hidden dark:block w-[272px] h-[572px]" alt="" />
+                        <img src={AppModelo} className="dark:block w-[272px] h-[572px]" alt="" />
                     </div>
                 </div>
-
-
-                {/* <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                    <img className="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600" />
-                </div> */}
             </div>
         </section>
     )
