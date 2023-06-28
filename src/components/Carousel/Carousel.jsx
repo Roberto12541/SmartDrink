@@ -1,4 +1,4 @@
-import { Carousel } from 'flowbite';
+// import { Carousel } from 'flowbite';
 import item1 from '../../assets/Carrusel/item1.jpeg'
 import item2 from '../../assets/Carrusel/item2.webp'
 import item3 from '../../assets/Carrusel/item3.jpg'
