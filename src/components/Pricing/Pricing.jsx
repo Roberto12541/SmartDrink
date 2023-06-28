@@ -1,11 +1,11 @@
-
 const Pricing = () => {
     return ( 
         <section>
             <div className="relative items-center w-full mx-auto md:px-12 lg:px-16 max-w-7xl">
                 <div>
+                    <h1 className="text-center text-3xl font-semibold mt-10 md:text-4xl">Selecciona tu plan SmartDrink</h1>
                     <div className="relative p-10 space-y-12 overflow-hidden lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8 rounded-xl">
-                        <div className="relative flex flex-col p-8 bg-white">
+                        <div className="relative flex flex-col p-8 bg-white border rounded-xl">
                             <div className="flex-1">
                                 <h3 className="text-xl font-semibold text-neutral-600">Basico</h3>
                                 <p className="flex items-baseline mt-4 text-neutral-600">
@@ -29,7 +29,7 @@ const Pricing = () => {
                                 <a href="#" type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-blue-600 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 bg-white"> Contratar </a>
                             </div>
                         </div>
-                        <div className="relative flex flex-col p-8 bg-black rounded-2xl">
+                        <div className="relative flex flex-col p-8 bg-black border rounded-2xl">
                             <div className="relative flex-1">
                                 <h3 className="text-xl font-semibold text-white">Intermedio</h3>
                                 <p className="flex items-baseline mt-4 text-white">
@@ -53,7 +53,7 @@ const Pricing = () => {
                                 <a href="/pricing" type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 bg-white"> Contratar </a>
                             </div>
                         </div>
-                        <div className="relative flex flex-col p-8 bg-white">
+                        <div className="relative flex flex-col p-8 bg-white border rounded-xl">
                             <div className="flex-1">
                                 <h3 className="text-xl font-semibold text-neutral-600">Profesional</h3>
                                 <p className="flex items-baseline mt-4 text-neutral-600">

@@ -1,5 +1,6 @@
 import './Navbar.css'
 import { useState } from 'react'
+import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -12,11 +13,13 @@ const Navbar = () => {
     <header className='py-4 bg-white relative z-50'>
       <div className="flex items-center justify-between px-4 max-w-[1200px] mx-auto">
         <ul className='gap-4 hidden text-lg lg:flex'>
-          <li>Inicio</li>
-          <li>Productos</li>
-          <li>Contacto</li>
+          <li><NavLink to={'/'}>Inicio</NavLink></li>
+          <li><NavLink to={'/servicios'}>Servicios</NavLink></li>
+          <li><NavLink to={'/contacto'}>Contacto</NavLink></li>
         </ul>
-        <img src="../src/assets/Logo.png" className='h-14 lg:block' alt="" />
+        <Link to={'/'}>
+          <img src="./assets/Logo.png" className='h-14 lg:block' alt="" />
+        </Link>
         <div className="flex items-center gap-4">
           <button type="button" className="relative inline-flex items-center py-2.5 text-sm font-medium text-center cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -53,10 +56,9 @@ const Navbar = () => {
         navbar &&
         <div className="-z-10 animate-[aparecer_300ms_ease-in-out] bg-white w-full absolute p-6 font-medium">
           <ul className='flex flex-col gap-4'>
-            <li>Inicio</li>
-            <li>Productos</li>
-            <li>Servicios</li>
-            <li>Iniciar Sesión</li>
+            <li><NavLink to={'/'}>Inicio</NavLink></li>
+            <li><NavLink to={'/servicios'}>Servicios</NavLink></li>
+            <li><NavLink to={'/contacto'}>Contacto</NavLink></li>
             <li>
               <form className="flex items-center">
                 <label htmlFor="simple-search" className="sr-only">Buscar</label>

@@ -2,12 +2,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 // import Banner from './components/Banner/Banner';
 import Carrusel from './components/Carousel/Carousel';
-import Banner from './components/Banner/Banner';
+// import Banner from './components/Banner/Banner';
 import BannerTwo from './components/Banner/BannerTwo';
 import AppSection from './components/Section/AppSection';
 import Pricing from './components/Pricing/Pricing';
 import Footer from './components/Footer/Footer';
-import Galery from './components/Galery/Galery';
+import Team from './components/Section/Team';
+import NoFound from './components/Section/NoFound';
+import Promo from './components/Section/Promo';
+// import Galery from './components/Galery/Galery';
 
 function App() {
   return (
@@ -19,12 +22,29 @@ function App() {
           <Route path='/' element={
             <>
               <Carrusel/>
-              <Banner />
-              <BannerTwo/>
-              <AppSection/>
+              <Promo/>
               <Pricing/>
-              <Galery/>
+              <AppSection/>
+              <Team/>
+              <BannerTwo/>
               <Footer/>
+            </>
+          }/>
+          <Route path='/servicios' element={
+            <>
+              
+              <Footer/>
+            </>
+          }/>
+          <Route path='/contacto' element={
+            <>
+              
+              <Footer/>
+            </>
+          }/>
+          <Route path='*' element={
+            <>
+              <NoFound/>
             </>
           }/>
         </Routes>

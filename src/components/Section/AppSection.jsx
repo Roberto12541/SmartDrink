@@ -1,10 +1,10 @@
 const AppSection = () => {
     return (
         <section className="text-gray-600 body-font max-w-[1200px] mx-auto">
-            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div className="container mx-auto flex px-5 py-12 md:flex-row flex-col items-center">
                 <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                    <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Descarga SmartDrink</h1>
-                    <p className="mb-8 leading-relaxed">Descarga SmartDrink en tu tienda de aplicaciones favoritas y empieza a preparar tus bebidas como nunca antes.</p>
+                    <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 md:text-5xl">Descarga SmartDrink</h1>
+                    <p className="mb-8 leading-relaxed md:text-3xl">Descarga SmartDrink en tu tienda de aplicaciones favoritas y empieza a preparar tus bebidas como nunca antes.</p>
                     <div className="flex lg:flex-row md:flex-col">
                         <button className="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-6 h-6" viewBox="0 0 512 512">
