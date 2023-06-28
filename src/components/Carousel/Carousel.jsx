@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import { Carousel } from 'flowbite';
 import item1 from '../../assets/Carrusel/item1.jpeg'
 import item2 from '../../assets/Carrusel/item2.webp'
