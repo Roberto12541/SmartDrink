@@ -16,19 +16,14 @@ const Navbar = () => {
         <ul className='gap-4 hidden text-lg lg:flex'>
           <li><NavLink to={'/'}>Inicio</NavLink></li>
           <li><NavLink to={'/servicios'}>Servicios</NavLink></li>
-          <li><NavLink to={'/contacto'}>Contacto</NavLink></li>
+          <li><NavLink to={'/productos'}>Productos</NavLink></li>
+          <li><NavLink to={'/nosotros'}>Nosotros</NavLink></li>
         </ul>
         <Link to={'/'}>
           <img src={Logo} className='h-14 lg:block' alt="" />
         </Link>
         <div className="flex items-center gap-4">
-          <button type="button" className="relative inline-flex items-center py-2.5 text-sm font-medium text-center cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-            </svg>
-            <span className="sr-only">Cart Items</span>
-            <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-black border-2 rounded-full -top-2 -left-4 dark:border-gray-900">8</div>
-          </button>
+          
           <form className="hidden items-center lg:flex">
             <label htmlFor="simple-search" className="sr-only">Buscar</label>
             <div className="relative w-full">
@@ -42,6 +37,14 @@ const Navbar = () => {
               <span className="sr-only">Search</span>
             </button>
           </form>
+          <button type="button" className="relative inline-flex items-center py-2.5 text-sm font-medium text-center cursor-pointer
+          mx-1">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+            </svg>
+            <span className="sr-only">Cart Items</span>
+            <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-black border-2 rounded-full -top-1 -left-4 dark:border-gray-900">8</div>
+          </button>
           {
             navbar ?
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 lg:hidden" onClick={changeState}>
@@ -59,7 +62,8 @@ const Navbar = () => {
           <ul className='flex flex-col gap-4'>
             <li><NavLink to={'/'}>Inicio</NavLink></li>
             <li><NavLink to={'/servicios'}>Servicios</NavLink></li>
-            <li><NavLink to={'/contacto'}>Contacto</NavLink></li>
+            <li><NavLink to={'/productos'}>Productos</NavLink></li>
+            <li><NavLink to={'/nosotros'}>Contacto</NavLink></li>
             <li>
               <form className="flex items-center">
                 <label htmlFor="simple-search" className="sr-only">Buscar</label>

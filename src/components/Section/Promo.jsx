@@ -9,13 +9,13 @@ const Promo = () => {
                         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                             Cambiando la manera de preparar bebidas
                         </h1>
-                        <p className="mt-4 text-xl text-gray-500">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, temporibus vel. Saepe tempora officia nobis rem, reiciendis enim placeat molestiae?
+                        <p className="mt-6 text-xl text-gray-500 text-justify">
+                            Comprometidos con la innovación, creatividad y servicio para que puedas brindar
+                            la mejor experiencia a tus clientes con un estilo original.
                         </p>
                     </div>
                     <div>
                         <div className="mt-10">
-                            {/* Decorative image grid */}
                             <div
                                 aria-hidden="true"
                                 className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"

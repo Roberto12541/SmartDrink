@@ -11,8 +11,12 @@ import Team from './components/Section/Team';
 import NoFound from './components/Section/NoFound';
 import Promo from './components/Section/Promo';
 import Contacto from './components/Section/Contacto';
-import Service from './components/Section/Service';
-import Steps from './components/Section/Steps';
+// import Service from './components/Section/Service';
+// import Steps from './components/Section/Steps';
+import AboutUs from './components/Section/AboutUs';
+import Comparation from './components/Section/Comparation';
+import ItemListContainer from './components/Products/ItemListContainer';
+// import Category from './components/Products/Category';
 // import AppSectionTwo from './components/Section/AppSectionTwo';
 // import Galery from './components/Galery/Galery';
 
@@ -37,17 +41,32 @@ function App() {
           <Route path='/servicios' element={
             <>
               
-              <Service/>
-              <Steps/>
+              <Pricing/>
+              <Comparation/>
+              <AppSection/>
               <Footer/>
             </>
           }/>
-          <Route path='/contacto' element={
+          <Route path='/productos' element={
             <>
               
-              <Contacto/>
+              <ItemListContainer/>
+              <Footer/>
+            </>
+          }/>
+          <Route path='/productos/:categoria' element={
+            <>
+              
+              <ItemListContainer/>
+              <Footer/>
+            </>
+          }/>
+          <Route path='/nosotros' element={
+            <>
+              
+              <AboutUs/>
               <Team/>
-              <AppSection/>
+              <Contacto/>
               <Footer/>
             </>
           }/>

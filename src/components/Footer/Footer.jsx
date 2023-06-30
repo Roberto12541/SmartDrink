@@ -11,11 +11,11 @@ const Footer = () => {
             </div>
 
             <div className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
-                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2" id="basico">
                     <div>
                         <p>
-                            <span className="text-xs uppercase tracking-wide text-white">Call us</span>
-                            <a href="#" className="block text-2xl font-medium text-white hover:opacity-75 sm:text-3xl">0123456789</a>
+                            <span className="text-xs uppercase tracking-wide text-white">¿Tienes dudas?</span>
+                            <p href="#" className="block text-2xl font-medium text-white sm:text-3xl">Contactanos</p>
                         </p>
 
                         <ul className="mt-8 space-y-1 text-sm">
@@ -25,7 +25,7 @@ const Footer = () => {
 
                         <ul className="mt-8 flex gap-6">
                             <li>
-                                <a href="/" rel="noreferrer" target="_blank" className="text-white transition hover:opacity-75">
+                                <a href="https://www.facebook.com/profile.php?id=100093851094281" rel="noreferrer" target="_blank" className="text-white transition hover:opacity-75">
                                     <span className="sr-only">Facebook</span>
                                     <svg className="h-6 w-6" fill="white" viewBox="0 0 24 24" aria-hidden="true">
                                         <path
@@ -38,7 +38,7 @@ const Footer = () => {
                             </li>
 
                             <li>
-                                <a href="/" rel="noreferrer" target="_blank" className="text-white transition hover:opacity-75" >
+                                <a href="https://www.instagram.com/smartdrink__/" rel="noreferrer" target="_blank" className="text-white transition hover:opacity-75" >
                                     <span className="sr-only">Instagram</span>
                                     <svg className="h-6 w-6" fill="white" viewBox="0 0 24 24" aria-hidden="true" >
                                         <path
@@ -78,6 +78,12 @@ const Footer = () => {
                                         Servicios
                                     </a>
                                 </li>
+
+                                <li>
+                                    <a href="#" className="text-white transition hover:opacity-75">
+                                        Contacto
+                                    </a>
+                                </li>
                             </ul>
                         </div>
 
@@ -92,7 +98,13 @@ const Footer = () => {
 
                                 <li>
                                     <a href="#" className="text-white transition hover:opacity-75">
-                                        Aviso de privacidad
+                                        Misión
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" className="text-white transition hover:opacity-75">
+                                        Visión
                                     </a>
                                 </li>
                             </ul>

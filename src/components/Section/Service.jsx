@@ -4,7 +4,7 @@ const Service = () => {
     return (
         <div className="bg-white dark:bg-gray-900">
             <div className="container px-6 py-8 mx-auto">
-                <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Selecciona tu plan de SmartDrink</h1>
+                <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white" id="uno">Selecciona tu plan de SmartDrink</h1>
                 <p className="max-w-2xl mx-auto mt-4 text-center text-gray-500 xl:mt-6 dark:text-gray-300">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, ea nulla tenetur quasi distinctio in.
                 </p>
