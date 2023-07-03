@@ -16,6 +16,8 @@ import Contacto from './components/Section/Contacto';
 import AboutUs from './components/Section/AboutUs';
 import Comparation from './components/Section/Comparation';
 import ItemListContainer from './components/Products/ItemListContainer';
+import LoginModal from './components/Modal/LoginModal';
+import CartModal from './components/Modal/CartModal';
 // import Category from './components/Products/Category';
 // import AppSectionTwo from './components/Section/AppSectionTwo';
 // import Galery from './components/Galery/Galery';
@@ -76,6 +78,8 @@ function App() {
             </>
           }/>
         </Routes>
+        <LoginModal/>
+        <CartModal/>
         {/* </CarritoProvider> */}
       </BrowserRouter>
     </>
