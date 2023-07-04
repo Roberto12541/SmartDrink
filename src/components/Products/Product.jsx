@@ -1,29 +1,21 @@
 import { Link } from "react-router-dom"
 
-const Product = ({ id, image, price, category }) => {
+const Product = ({ id, image, price, category, name}) => {
     return (
         <li key={id}>
-            <a href="#" className="group block overflow-hidden">
-                <img
-                    src={image}
-                    alt=""
-                    className="h-[350px] w-full object-contain transition duration-500 group-hover:scale-105 sm:h-[450px]"
-                />
-
-                <div className="relative bg-white pt-3">
-                    <h3
-                        className="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4"
-                    >
-                        {category}
-                    </h3>
-
-                    <p className="mt-2">
-                        <span className="sr-only"> Regular Price </span>
-
-                        <span className="tracking-wider text-gray-900">$ {price}.00 mnx </span>
-                    </p>
+            <Link to={'/'} href="#" className="group relative block overflow-hidden rounded-2xl">
+                <img src={image} alt="" className="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72"/>
+                <div className="relative border border-gray-100 bg-white p-6">
+                    <span className="whitespace-nowrap bg-black px-3 py-1.5 text-xs font-medium rounded-lg text-white" > {category} </span>
+                    <h3 className="mt-4 text-lg font-medium text-gray-900 line-clamp-1"> {name} </h3>
+                    <p className="mt-1.5 text-sm text-gray-700">${price}.00</p>
+                    <form className="mt-4">
+                        <button className="block w-full rounded-xl bg-black p-4 text-sm font-medium transition hover:scale-105 text-white">
+                            Agregar al carrito
+                        </button>
+                    </form>
                 </div>
-            </a>
+            </Link>
         </li>
     )
 }

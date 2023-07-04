@@ -1,30 +1,62 @@
-import { collection, getDocs, where, query } from 'firebase/firestore'
+import { collection, getDocs } from 'firebase/firestore'
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { db } from "../../services/firebase"
 import ListProducts from "./ListProducts"
+import Search from '../Navbar/Search'
 
-const ItemListContainer = () => {
+const SearchContainer = () => {
     const [productos, setProductos] = useState([]);
-    const [stateCategorias, setStateCategorias] = useState(false)
-    const { categoria } = useParams();
+    const { busqueda } = useParams();
 
-    const changeState = () => {
-        setStateCategorias(!stateCategorias);
-    }
 
     useEffect(() => {
-        const productos = categoria ? query(collection(db, 'products'), where('category', '==', categoria)) : collection(db, 'products')
+        const productos = collection(db, 'products')
+        const filter = [];
         getDocs(productos)
             .then(res => {
-                const newProductos = res.docs.map(doc => {
+                res.docs.map(doc => {
+                    const id = doc.id;
                     const data = doc.data()
-                    return { id: doc.id, ...data }
+                    const nombre = data.name.toLowerCase()
+                    const words = nombre.split(' ')
+                    if (words.includes(`${busqueda.toLowerCase()}`)) {
+                        filter.push({
+                            id: id,
+                            ...data
+                        })
+                    }
                 })
-                setProductos(newProductos)
+                console.log(filter);
+                setProductos(filter)
             })
             .catch(error => console.log(error))
-    }, [categoria])
+    }, [busqueda])
+
+    if (productos.length < 1) {
+        return (
+            <div>
+                <section className="w-full bg-white dark:bg-wickeddark">
+                    <div className="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
+                        <div className="flex w-full mx-auto text-left">
+                            <div className="relative inline-flex items-center mx-auto align-middle">
+                                <div className="pb-12 text-center">
+                                    <h1 className="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl mb-8">
+                                        Ups!, no encontramos <br className="hidden lg:block" />
+                                        resultados para {`'${busqueda}'`}
+                                    </h1>
+                                    <Search/>
+                                    <div className="sm:max-w-lg sm:flex md:mx-auto">
+                                        <img src="https://img.freepik.com/vector-premium/producto-no-encontrado-ilustracion-plana_418302-105.jpg?w=2000" alt="" className='w-8/12 mx-auto' />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        )
+    }
 
     return (
         <section>
@@ -40,23 +72,13 @@ const ItemListContainer = () => {
                     <div className="relative">
                         <div className="inline-flex items-center overflow-hidden rounded-md border bg-white">
                             <span href="#" className="border-e px-4 py-2 text-sm/none text-gray-600 hover:bg-gray-50 hover:text-gray-700">Categorias</span>
-                            <button className="h-full p-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700" onClick={changeState}>
+                            <button className="h-full p-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700">
                                 <span className="sr-only">Menu</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                                 </svg>
                             </button>
                         </div>
-                        {
-                            stateCategorias &&
-                            <div className="absolute start-0 z-10 mt-2 w-56 rounded-md border border-gray-100 bg-white shadow-lg" role="menu">
-                                <div className="p-2">
-                                    <Link to={'/productos'} href="#" className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700" role="menuitem" onClick={changeState}>Todos los productos</Link>
-                                    <Link to={'/productos/Luces'} href="#" className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700" role="menuitem" onClick={changeState}>Luces</Link>
-                                    <Link to={'/productos/Apagadores'} href="#" className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700" role="menuitem" onClick={changeState}>Apagadores</Link>
-                                </div>
-                            </div>
-                        }
                     </div>
                 </div>
 
@@ -86,4 +108,4 @@ const ItemListContainer = () => {
     )
 }
 
-export default ItemListContainer
+export default SearchContainer

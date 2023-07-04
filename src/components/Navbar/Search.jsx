@@ -4,10 +4,6 @@ import { Link } from "react-router-dom";
 const Search = () => {
     const [busqueda, setBusqueda] = useState("");
 
-    // const handleBusqueda = () => {
-
-    // }
-
     return (
         <div className="hidden items-center lg:flex">
             <label htmlFor="simple-search" className="sr-only">Buscar</label>
@@ -17,7 +13,7 @@ const Search = () => {
                 </div>
                 <input type="text" id="simple-search" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Buscar" required value={busqueda} onChange={(e) => setBusqueda(e.target.value)}/>
             </div>
-            <Link to={`/productos/${busqueda}`} type="submit" className="p-2.5 ml-2 text-sm font-medium text-white bg-black rounded-lg border hover:scale-105 focus:ring-blue-300">
+            <Link to={`/search/${busqueda}`} className="p-2.5 ml-2 text-sm font-medium text-white bg-black rounded-lg border hover:scale-105 focus:ring-blue-300">
                 <svg className="w-5 h-5" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                 <span className="sr-only">Search</span>
             </Link>

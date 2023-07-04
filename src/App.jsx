@@ -18,6 +18,7 @@ import Comparation from './components/Section/Comparation';
 import ItemListContainer from './components/Products/ItemListContainer';
 import LoginModal from './components/Modal/LoginModal';
 import CartModal from './components/Modal/CartModal';
+import SearchContainer from './components/Products/SearchContainer';
 // import Category from './components/Products/Category';
 // import AppSectionTwo from './components/Section/AppSectionTwo';
 // import Galery from './components/Galery/Galery';
@@ -63,10 +64,10 @@ function App() {
               <Footer/>
             </>
           }/>
-          <Route path='/productos/:search' element={
+          <Route path='/search/:busqueda?' element={
             <>
               
-              <ItemListContainer/>
+              <SearchContainer/>
               <Footer/>
             </>
           }/>
