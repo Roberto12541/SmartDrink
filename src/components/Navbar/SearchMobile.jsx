@@ -5,7 +5,7 @@ const SearchMobile = () => {
     const [busqueda, setBusqueda] = useState("");
 
     return (
-        <div className="items-center lg:flex">
+        <div className="flex items-center lg:hidden">
             <label htmlFor="simple-search" className="sr-only">Buscar</label>
             <div className="relative w-full">
                 <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">

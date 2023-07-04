@@ -4,6 +4,7 @@ import Logo from '../../assets/Logo.png'
 import LogoCorto from '../../assets/Logo-mobile.png'
 import Search from './Search';
 import SearchMobile from './SearchMobile';
+import LoginModal from '../Modal/LoginModal';
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -66,6 +67,7 @@ const Navbar = () => {
           </ul>
         </div>
       }
+      <LoginModal/>
     </header>
   )
 }
