@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react'
-import { Dropdown } from 'flowbite'
 import { useParams, Link } from 'react-router-dom'
 import ListProducts from "./ListProducts"
-// import Category from "./Category"
 import { db } from "../../services/firebase"
 import { collection, getDocs, where, query } from 'firebase/firestore'
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
+    const [stateCategorias, setStateCategorias] = useState(false)
     const { categoria } = useParams();
+
+    const changeState = () => {
+        setStateCategorias(!stateCategorias);
+    }
 
     useEffect(() => {
         const productos = categoria ? query(collection(db, 'products'), where('category', '==', categoria)) : collection(db, 'products')
@@ -24,16 +27,6 @@ const ItemListContainer = () => {
     }, [categoria])
 
     return (
-        // <section className="text-gray-600 body-font">
-        //     <div className="container px-5 py-6 mx-auto">
-        //         <h1 className="mb-4 text-center font-semibold text-4xl">Productos</h1>
-        //         <Category />
-        //         <div className="flex flex-wrap -m-4">
-        //             <ListProducts productos={productos} />
-        //         </div>
-        //     </div>
-        // </section>
-
         <section>
             <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
                 <header>
@@ -46,27 +39,27 @@ const ItemListContainer = () => {
                 </header>
 
                 <div className="mt-8 block lg:hidden">
-                    <div>
-                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg className="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg></button>
-                        {/* Dropdown menu */}
-                        <div id="dropdown" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                            <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                                <li>
-                                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                                </li>
-                                <li>
-                                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                                </li>
-                                <li>
-                                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                                </li>
-                                <li>
-                                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-                                </li>
-                            </ul>
+                    <div className="relative">
+                        <div className="inline-flex items-center overflow-hidden rounded-md border bg-white">
+                            <span href="#" className="border-e px-4 py-2 text-sm/none text-gray-600 hover:bg-gray-50 hover:text-gray-700">Categorias</span>
+                            <button className="h-full p-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700" onClick={changeState}>
+                                <span className="sr-only">Menu</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"/>
+                                </svg>
+                            </button>
                         </div>
+                        {
+                            stateCategorias && 
+                            <div className="absolute start-0 z-10 mt-2 w-56 rounded-md border border-gray-100 bg-white shadow-lg" role="menu">
+                                <div className="p-2">
+                                    <Link to={'/productos'} href="#" className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700" role="menuitem" onClick={changeState}>Todos los productos</Link>
+                                    <Link to={'/productos/Luces'} href="#" className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700" role="menuitem" onClick={changeState}>Luces</Link>
+                                    <Link to={'/productos/Apagadores'} href="#" className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700" role="menuitem" onClick={changeState}>Apagadores</Link>
+                                </div>
+                            </div>
+                        }
                     </div>
-
                 </div>
 
                 <div className="mt-4 lg:mt-8 lg:grid lg:grid-cols-4 lg:items-start lg:gap-8">
