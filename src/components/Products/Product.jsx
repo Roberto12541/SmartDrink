@@ -1,95 +1,30 @@
 import { Link } from "react-router-dom"
 
-const Product = ({ id, image, price }) => {
+const Product = ({ id, image, price, category }) => {
     return (
-        <a href="#" className="block group">
-            <img
-                src={image}
-                alt=""
-                className="h-[350px] w-full object-cover sm:h-[450px]"
-            />
+        <li key={id}>
+            <a href="#" className="group block overflow-hidden">
+                <img
+                    src={image}
+                    alt=""
+                    className="h-[350px] w-full object-contain transition duration-500 group-hover:scale-105 sm:h-[450px]"
+                />
 
-            <div className="mt-1.5">
-                <p className="text-xs text-gray-500">Space Grey</p>
-
-                <div className="mt-1.5 flex gap-1">
-                    <form>
-                        <fieldset>
-                            <legend className="sr-only">Color</legend>
-                        </fieldset>
-
-                        <div
-                            className="flex flex-wrap justify-center gap-1 [&:hover_label]:opacity-75"
-                        >
-                            <div>
-                                <input type="checkbox" id="ColorSg" className="sr-only" />
-
-                                <label
-                                    htmlFor="ColorSg"
-                                    className="block h-4 w-4 cursor-pointer rounded-full bg-[#595759] transition hover:!opacity-100"
-                                >
-                                    <span className="sr-only"> Space Gray </span>
-                                </label>
-                            </div>
-
-                            <div>
-                                <input type="checkbox" id="ColorS" className="sr-only" />
-
-                                <label
-                                    htmlFor="ColorS"
-                                    className="block h-4 w-4 cursor-pointer rounded-full bg-[#d2d3d4] transition hover:!opacity-100"
-                                >
-                                    <span className="sr-only"> Silver </span>
-                                </label>
-                            </div>
-
-                            <div>
-                                <input type="checkbox" id="ColorP" className="sr-only" />
-
-                                <label
-                                    htmlFor="ColorP"
-                                    className="block h-4 w-4 cursor-pointer rounded-full bg-[#d89f97] transition hover:!opacity-100"
-                                >
-                                    <span className="sr-only"> Pink </span>
-                                </label>
-                            </div>
-
-                            <div>
-                                <input type="checkbox" id="ColorG" className="sr-only" />
-
-                                <label
-                                    htmlFor="ColorG"
-                                    className="block h-4 w-4 cursor-pointer rounded-full bg-[#afbfab] transition hover:!opacity-100"
-                                >
-                                    <span className="sr-only"> Pink </span>
-                                </label>
-                            </div>
-
-                            <div>
-                                <input type="checkbox" id="ColorSb" className="sr-only" />
-
-                                <label
-                                    htmlFor="ColorSb"
-                                    className="block h-4 w-4 cursor-pointer rounded-full bg-[#91a5bb] transition hover:!opacity-100"
-                                >
-                                    <span className="sr-only"> Pink </span>
-                                </label>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <div className="flex justify-between mt-3 text-sm">
+                <div className="relative bg-white pt-3">
                     <h3
-                        className="text-gray-900 group-hover:underline group-hover:underline-offset-4"
+                        className="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4"
                     >
-                        Small Headphones
+                        {category}
                     </h3>
 
-                    <p className="text-gray-900">$299</p>
+                    <p className="mt-2">
+                        <span className="sr-only"> Regular Price </span>
+
+                        <span className="tracking-wider text-gray-900">$ {price}.00 mnx </span>
+                    </p>
                 </div>
-            </div>
-        </a>
+            </a>
+        </li>
     )
 }
 
