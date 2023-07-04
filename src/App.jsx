@@ -63,6 +63,13 @@ function App() {
               <Footer/>
             </>
           }/>
+          <Route path='/productos/:search' element={
+            <>
+              
+              <ItemListContainer/>
+              <Footer/>
+            </>
+          }/>
           <Route path='/nosotros' element={
             <>
               
