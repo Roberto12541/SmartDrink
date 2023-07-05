@@ -46,7 +46,7 @@ const Pricing = () => {
                                 </ul>
                             </div>
                             <div className="mt-6 rounded-lg">
-                                <Link to={'/servicios'} type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Comprar ahora </Link>
+                                <Link to={'/checkout/9200/SmartBasic'} type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Comprar ahora </Link>
                             </div>
                         </div>
                         <div className="relative flex flex-col p-8 bg-black border rounded-2xl">
@@ -97,7 +97,7 @@ const Pricing = () => {
                                 </ul>
                             </div>
                             <div className="z-50 mt-6 rounded-lg">
-                                <Link to={'/servicios'} type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 bg-white"> Comprar ahora</Link>
+                                <Link to={'/checkout/11400/SmartInter'} type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Comprar ahora </Link>
                             </div>
                         </div>
                         <div className="relative flex flex-col p-8 bg-white border rounded-xl">
@@ -154,7 +154,7 @@ const Pricing = () => {
                                 </ul>
                             </div>
                             <div className="mt-6 rounded-lg">
-                                <Link to={'/servicios'} type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Comprar ahora</Link>
+                                <Link to={'/checkout/13000/SmartPro'} type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Comprar ahora </Link>
                             </div>
                         </div>
                     </div>

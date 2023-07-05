@@ -22,7 +22,7 @@ const Details = ({ id, name, category, image, price, stock, description }) => {
                 <h2 className="text-sm title-font text-gray-500 tracking-widest">{category}</h2>
                 <h1 className="text-gray-900 title-font font-medium mb-1 text-lg line-clamp-3 sm:line-clamp-none md:text-2xl">{name}</h1>
                 <div className="flex mb-4">
-                    <span className="text-lg">Stock: {stock} disponibles</span>
+                    <span className="text-lg font-semibold text-green-600">Stock: {stock} disponibles</span>
                 </div>
                 <p className="leading-relaxed">{description}</p>
                 <div className="flex flex-col gap-4 items-center mt-4 justify-between sm:flex-row ">
