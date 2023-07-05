@@ -17,6 +17,7 @@ import SearchContainer from './components/Products/SearchContainer';
 import ProductDetails from './components/Products/ProductDetails.jsx';
 import Cart from './components/Cart/Cart.jsx';
 import Checkout from './components/Checkout/Checkout.jsx';
+import BannerThree from './components/Section/BannerThree.jsx';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={
-            <><Carrusel/><Promo/><Pricing/><AppSection/><Team/><BannerTwo/><Footer/></>
+            <><Carrusel/><Promo/><BannerThree/><Pricing/><AppSection/><Team/><BannerTwo/><Footer/></>
           }/>
           <Route path='/servicios' element={
             <><Pricing/><Comparation/><AppSection/><Footer/></>
