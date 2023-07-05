@@ -9,7 +9,7 @@ const Pricing = () => {
                             <div className="flex-1">
                                 <h3 className="text-xl font-semibold text-neutral-600">SmartBasic</h3>
                                 <p className="flex items-baseline mt-4 text-neutral-600">
-                                    <span className="text-5xl font-bold tracking-tight">$1,200</span>
+                                    <span className="text-5xl font-bold tracking-tight">$9,200</span>
                                     <span className="ml-1 text-xl font-semibold">MXN</span>
                                 </p>
                                 <p className="mt-6 text-gray-500 text-justify">Con el paquete SmartBasic tendrás acceso a tutoriales detallados
@@ -44,14 +44,14 @@ const Pricing = () => {
                                 </ul>
                             </div>
                             <div className="mt-6 rounded-lg">
-                                <a href='/servicios#basico' type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Contratar </a>
+                                <a href='/servicios#basicos' type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Contratar </a>
                             </div>
                         </div>
                         <div className="relative flex flex-col p-8 bg-black border rounded-2xl">
                             <div className="relative flex-1">
                                 <h3 className="text-xl font-semibold text-white">SmartInter</h3>
                                 <p className="flex items-baseline mt-4 text-white">
-                                    <span className="text-5xl font-bold tracking-tight text-white">$2,400</span>
+                                    <span className="text-5xl font-bold tracking-tight text-white">$11,400</span>
                                     <span className="ml-1 text-xl font-semibold text-white">MXN</span>
                                 </p>
                                 <p className="mt-6 text-white text-solitud line-clamp-5 text-justify">Con el paquete SmartInter obtendrás la capacitación
@@ -95,14 +95,14 @@ const Pricing = () => {
                                 </ul>
                             </div>
                             <div className="z-50 mt-6 rounded-lg">
-                                <a href="/pricing" type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 bg-white"> Contratar </a>
+                                <a href='/servicios#intermedio' type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 bg-white"> Contratar </a>
                             </div>
                         </div>
                         <div className="relative flex flex-col p-8 bg-white border rounded-xl">
                             <div className="flex-1">
                                 <h3 className="text-xl font-semibold text-neutral-600">SmartPro</h3>
                                 <p className="flex items-baseline mt-4 text-neutral-600">
-                                    <span className="text-5xl font-bold tracking-tight">$3,000</span>
+                                    <span className="text-5xl font-bold tracking-tight">$13,000</span>
                                     <span className="ml-1 text-xl font-semibold">MXN</span>
                                 </p>
                                 <p className="mt-6 text-gray-500 line-clamp-5 text-justify">Con el paquete SmartPro podrás elegir el diseño de tu preferencia

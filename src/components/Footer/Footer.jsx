@@ -15,12 +15,12 @@ const Footer = () => {
                     <div>
                         <p>
                             <span className="text-xs uppercase tracking-wide text-white">¿Tienes dudas?</span>
-                            <p href="#" className="block text-2xl font-medium text-white sm:text-3xl">Contáctanos</p>
+                            <p href="#" className="block text-2xl font-medium text-white sm:text-3xl"> <a href="/nosotros#Contacto">Contáctanos</a></p>
                         </p>
 
                         <ul className="mt-8 space-y-1 text-sm">
-                            <li className="text-white">Lunes a Viernes de 10am a 5pm</li>
-                            <li className="text-white">Fin de semana : 11am a 3pm</li>
+                            <li className="text-white">Lunes a Viernes de 10:00 am a 05:00 pm</li>
+                            <li className="text-white">Fin de semana : 11:00 am a 03:00 pm</li>
                         </ul>
 
                         <ul className="mt-8 flex gap-6">
