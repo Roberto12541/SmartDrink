@@ -1,7 +1,7 @@
 
 const Contacto = () => {
     return (
-        <section className="bg-white max-w-[1200px] mx-auto">
+        <section id="contac" className="bg-white max-w-[1200px] mx-auto">
             <div className="container px-6 py-12 mx-auto">
                 <div className="lg:flex lg:items-center lg:-mx-6">
                     <div className="lg:w-1/2 lg:mx-6">
