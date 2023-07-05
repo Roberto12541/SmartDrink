@@ -2,9 +2,12 @@ import { useState, useContext } from "react"
 import { CarritoContext } from "../../context/CartContext.jsx"
 import { db } from "../../services/firebase"
 import { collection, addDoc } from "firebase/firestore"
+import { useParams } from "react-router-dom"
+import Logo from "../../assets/Logo-mobile.png"
 
 const Checkout = () => {
     const { carrito, vaciarCarrito } = useContext(CarritoContext);
+    const { price, name } = useParams();
     const [nombre, setNombre] = useState("")
     const [paterno, setPaterno] = useState("")
     const [materno, setMaterno] = useState("")
@@ -63,6 +66,25 @@ const Checkout = () => {
                         <div>
                             <div className="flow-root">
                                 <ul className="-my-4 divide-y divide-gray-100">
+                                    {
+                                        name &&
+                                        <li className="flex items-center gap-4 py-4">
+                                            <img src={Logo} alt="" className="h-16 w-16 rounded object-fill" />
+                                            <div>
+                                                <h3 className="text-sm text-gray-900 line-clamp-1">{name}</h3>
+                                                <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
+                                                    <div>
+                                                        <dt className="inline text-sm">Cantidad: </dt>
+                                                        <dd className="inline text-sm">1</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt className="inline text-sm">Precio:</dt>
+                                                        <dd className="inline text-sm"> ${price}</dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </li>
+                                    }
                                     {carrito.map(producto =>
                                         <li className="flex items-center gap-4 py-4" key={producto.id}>
                                             <img src={producto.item.image} alt="" className="h-16 w-16 rounded object-fill" />

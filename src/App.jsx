@@ -1,9 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CarritoProvider } from './context/CartContext.jsx';
 import Navbar from './components/Navbar/Navbar';
-// import Banner from './components/Banner/Banner';
 import Carrusel from './components/Carousel/Carousel';
-// import Banner from './components/Banner/Banner';
 import BannerTwo from './components/Banner/BannerTwo';
 import AppSection from './components/Section/AppSection';
 import Pricing from './components/Pricing/Pricing';
@@ -12,109 +10,55 @@ import Team from './components/Section/Team';
 import NoFound from './components/Section/NoFound';
 import Promo from './components/Section/Promo';
 import Contacto from './components/Section/Contacto';
-// import Service from './components/Section/Service';
-// import Steps from './components/Section/Steps';
 import AboutUs from './components/Section/AboutUs';
 import Comparation from './components/Section/Comparation';
 import ItemListContainer from './components/Products/ItemListContainer';
-// import LoginModal from './components/Modal/LoginModal';
-// import CartModal from './components/Modal/CartModal';
 import SearchContainer from './components/Products/SearchContainer';
-// import Details from './components/Products/Details.jsx';
 import ProductDetails from './components/Products/ProductDetails.jsx';
 import Cart from './components/Cart/Cart.jsx';
 import Checkout from './components/Checkout/Checkout.jsx';
-// import LoginModal from './components/Modal/LoginModal';
-// import Category from './components/Products/Category';
-// import AppSectionTwo from './components/Section/AppSectionTwo';
-// import Galery from './components/Galery/Galery';
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <CarritoProvider>
-        {/* <LoginModal/> */}
         <Navbar />
         <Routes>
           <Route path='/' element={
-            <>
-              <Carrusel/>
-              <Promo/>
-              <Pricing/>
-              <AppSection/>
-              <Team/>
-              <BannerTwo/>
-              <Footer/>
-            </>
+            <><Carrusel/><Promo/><Pricing/><AppSection/><Team/><BannerTwo/><Footer/></>
           }/>
           <Route path='/servicios' element={
-            <>
-              
-              <Pricing/>
-              <Comparation/>
-              <AppSection/>
-              <Footer/>
-            </>
+            <><Pricing/><Comparation/><AppSection/><Footer/></>
           }/>
           <Route path='/checkout' element={
-            <>
-              
-              <Checkout/> 
-              <Footer/>
-            </>
+            <><Checkout/><Footer/></>
+          }/>
+          <Route path='/checkout/:price/:name' element={
+            <><Checkout/> <Footer/></>
           }/>
           <Route path='/cart' element={
-            <>
-              
-              <Cart/>
-              <Footer/>
-            </>
+            <><Cart/><Footer/></>
           }/>
           <Route path='/productos' element={
-            <>
-              
-              <ItemListContainer/>
-              <Footer/>
-            </>
+            <><ItemListContainer/><Footer/></>
           }/>
           <Route path='/productos/:categoria' element={
-            <>
-              
-              <ItemListContainer/>
-              <Footer/>
-            </>
+            <><ItemListContainer/><Footer/></>
           }/>
           <Route path='/producto/:producto' element={
-            <>
-              <ProductDetails/>
-              <Footer/>
-            </>
+            <><ProductDetails/><Footer/></>
           }/>
           <Route path='/search/:busqueda?' element={
-            <>
-              
-              <SearchContainer/>
-              <Footer/>
-            </>
+            <><SearchContainer/><Footer/></>
           }/>
           <Route path='/nosotros' element={
-            <>
-              
-              <AboutUs/>
-              <Team/>
-              <Contacto/>
-              <Footer/>
-            </>
+            <><AboutUs/><Team/><Contacto/><Footer/></>
           }/>
           <Route path='*' element={
-            <>
-              <NoFound/>
-            </>
+            <><NoFound/></>
           }/>
         </Routes>
-        {/* <LoginModal/>
-        <CartModal/> */}
         </CarritoProvider>
       </BrowserRouter>
     </>

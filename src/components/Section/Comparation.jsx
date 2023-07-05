@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Comparation = () => {
     return (
         <>
@@ -62,13 +64,13 @@ const Comparation = () => {
                     <div className="grid grid-cols-4 px-4 py-5 text-sm text-gray-700 border-b border-gray-200 gap-x-16 dark:border-gray-700">
                         <div className="text-gray-500 dark:text-gray-400" />
                         <div>
-                            <a href="#" className="text-white block w-full border bg-black transition duration-500 ease-in-out hover:bg-white hover:border-black hover:text-black font-medium rounded-lg text-sm px-4 py-2.5 text-center">Comprar Ahora</a>
+                            <Link to={'/checkout/9500/SmartBasic'} className="text-white block w-full border bg-black transition duration-500 ease-in-out hover:bg-white hover:border-black hover:text-black font-medium rounded-lg text-sm px-4 py-2.5 text-center">Comprar Ahora</Link>
                         </div>
                         <div>
-                            <a href="#" className="text-white block w-full border bg-black transition duration-500 ease-in-out hover:bg-white hover:border-black hover:text-black font-medium rounded-lg text-sm px-4 py-2.5 text-center">Comprar Ahora</a>
+                            <Link to={'/checkout/11400/SmartInter'} className="text-white block w-full border bg-black transition duration-500 ease-in-out hover:bg-white hover:border-black hover:text-black font-medium rounded-lg text-sm px-4 py-2.5 text-center">Comprar Ahora</Link>
                         </div>
                         <div>
-                            <a href="#" className="text-white block w-full border bg-black transition duration-500 ease-in-out hover:bg-white hover:border-black hover:text-black font-medium rounded-lg text-sm px-4 py-2.5 text-center">Comprar Ahora</a>
+                            <Link to={'/checkout/13000/SmartPro'} className="text-white block w-full border bg-black transition duration-500 ease-in-out hover:bg-white hover:border-black hover:text-black font-medium rounded-lg text-sm px-4 py-2.5 text-center">Comprar Ahora</Link>
                         </div>
                     </div>
                 </div>
