@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { CarritoProvider } from './context/CartContext.jsx';
 import Navbar from './components/Navbar/Navbar';
 // import Banner from './components/Banner/Banner';
 import Carrusel from './components/Carousel/Carousel';
@@ -19,6 +20,9 @@ import ItemListContainer from './components/Products/ItemListContainer';
 // import LoginModal from './components/Modal/LoginModal';
 // import CartModal from './components/Modal/CartModal';
 import SearchContainer from './components/Products/SearchContainer';
+// import Details from './components/Products/Details.jsx';
+import ProductDetails from './components/Products/ProductDetails.jsx';
+import Cart from './components/Cart/Cart.jsx';
 // import LoginModal from './components/Modal/LoginModal';
 // import Category from './components/Products/Category';
 // import AppSectionTwo from './components/Section/AppSectionTwo';
@@ -28,7 +32,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        {/* <CarritoProvider> */}
+        <CarritoProvider>
         {/* <LoginModal/> */}
         <Navbar />
         <Routes>
@@ -52,6 +56,13 @@ function App() {
               <Footer/>
             </>
           }/>
+          <Route path='/cart' element={
+            <>
+              
+              <Cart/>
+              <Footer/>
+            </>
+          }/>
           <Route path='/productos' element={
             <>
               
@@ -63,6 +74,12 @@ function App() {
             <>
               
               <ItemListContainer/>
+              <Footer/>
+            </>
+          }/>
+          <Route path='/producto/:producto' element={
+            <>
+              <ProductDetails/>
               <Footer/>
             </>
           }/>
@@ -90,7 +107,7 @@ function App() {
         </Routes>
         {/* <LoginModal/>
         <CartModal/> */}
-        {/* </CarritoProvider> */}
+        </CarritoProvider>
       </BrowserRouter>
     </>
   );

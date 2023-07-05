@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const Product = ({ id, image, price, category, name }) => {
     return (
         <li key={id}>
-            <Link to={'/'} href="#" className="group relative block overflow-hidden rounded-2xl">
+            <Link to={`/producto/${id}`} href="#" className="group relative block overflow-hidden rounded-2xl">
                 <img src={image} alt="" className="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72"/>
                 <div className="relative border border-gray-100 bg-white p-6">
                     <span className="whitespace-nowrap bg-black px-3 py-1.5 text-xs font-medium rounded-lg text-white" > {category} </span>
