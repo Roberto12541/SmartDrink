@@ -28,7 +28,7 @@ const Contacto = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mx-2 text-blue-500 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
-                                <span className="mx-2 text-gray-700 truncate w-72">correo@correo.com</span>
+                                <span className="mx-2 text-gray-700 truncate w-72">smartdrink@gmail.com</span>
                             </p>
                         </div>
                         <div className="mt-6 w-80 md:mt-8">
