@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const Product = ({ id, image, price, category, name}) => {
+const Product = ({ id, image, price, category, name }) => {
     return (
         <li key={id}>
             <Link to={'/'} href="#" className="group relative block overflow-hidden rounded-2xl">
