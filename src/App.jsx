@@ -19,7 +19,7 @@ import ItemListContainer from './components/Products/ItemListContainer';
 // import LoginModal from './components/Modal/LoginModal';
 // import CartModal from './components/Modal/CartModal';
 import SearchContainer from './components/Products/SearchContainer';
-import LoginModal from './components/Modal/LoginModal';
+// import LoginModal from './components/Modal/LoginModal';
 // import Category from './components/Products/Category';
 // import AppSectionTwo from './components/Section/AppSectionTwo';
 // import Galery from './components/Galery/Galery';
@@ -29,7 +29,7 @@ function App() {
     <>
       <BrowserRouter>
         {/* <CarritoProvider> */}
-        <LoginModal/>
+        {/* <LoginModal/> */}
         <Navbar />
         <Routes>
           <Route path='/' element={

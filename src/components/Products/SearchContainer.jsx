@@ -9,7 +9,6 @@ const SearchContainer = () => {
     const [productos, setProductos] = useState([]);
     const { busqueda } = useParams();
 
-
     useEffect(() => {
         const productos = collection(db, 'products')
         const filter = [];
@@ -27,7 +26,6 @@ const SearchContainer = () => {
                         })
                     }
                 })
-                console.log(filter);
                 setProductos(filter)
             })
             .catch(error => console.log(error))
