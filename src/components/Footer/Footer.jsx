@@ -15,12 +15,12 @@ const Footer = () => {
                     <div>
                         <p>
                             <span className="text-xs uppercase tracking-wide text-white">¿Tienes dudas?</span>
-                            <p href="#" className="block text-2xl font-medium text-white sm:text-3xl">Contactanos</p>
+                            <p href="#" className="block text-2xl font-medium text-white sm:text-3xl">Contáctanos</p>
                         </p>
 
                         <ul className="mt-8 space-y-1 text-sm">
-                            <li className="text-white">Monday to Friday: 10am - 5pm</li>
-                            <li className="text-white">Weekend: 10am - 3pm</li>
+                            <li className="text-white">Lunes a Viernes de 10am a 5pm</li>
+                            <li className="text-white">Fin de semana : 11am a 3pm</li>
                         </ul>
 
                         <ul className="mt-8 flex gap-6">
@@ -92,7 +92,7 @@ const Footer = () => {
                             <ul className="mt-6 space-y-4 text-sm">
                                 <li>
                                     <a href="#" className="text-white transition hover:opacity-75">
-                                        Quienes somos
+                                    Quiénes somos
                                     </a>
                                 </li>
 
@@ -115,7 +115,7 @@ const Footer = () => {
                 <div className="mt-12 border-t border-gray-100 pt-4">
                     <div className="sm:flex sm:items-center sm:justify-between">
                         <p className="mt-8 text-xs text-gray-500 sm:mt-0">
-                            &copy; 2023. Javatec. All rights reserved.
+                            &copy; 2023. Javatec. Todos los derechos reservados.
                         </p>
                     </div>
                 </div>
