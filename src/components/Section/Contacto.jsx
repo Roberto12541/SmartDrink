@@ -5,8 +5,8 @@ const Contacto = () => {
             <div className="container px-6 py-12 mx-auto">
                 <div className="lg:flex lg:items-center lg:-mx-6">
                     <div className="lg:w-1/2 lg:mx-6">
-                        <h1 className="text-2xl font-semibold text-gray-800 capitalize dark:text-white lg:text-3xl">
-                            Contactanos para <br /> mas información
+                        <h1 className="text-2xl font-semibold text-gray-800 dark:text-white lg:text-3xl">
+                            Contáctanos para <br /> más información
                         </h1>
                         <div className="mt-6 space-y-8 md:mt-8">
                             <p className="flex items-start -mx-2">
@@ -32,7 +32,7 @@ const Contacto = () => {
                             </p>
                         </div>
                         <div className="mt-6 w-80 md:mt-8">
-                            <h3 className="text-gray-600 dark:text-gray-300 ">Siguenos en</h3>
+                            <h3 className="text-gray-600 dark:text-gray-300 ">Síguenos en</h3>
                             <div className="flex mt-4 -mx-1.5 ">
                                 <a className="mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500" href="">
                                     <svg className="w-10 h-10 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,15 +54,15 @@ const Contacto = () => {
                     </div>
                     <div className="mt-8 lg:w-1/2 lg:mx-6">
                         <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-900 lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
-                            <h1 className="text-lg font-medium text-gray-700">¿En que podemos ayudarte?</h1>
+                            <h1 className="text-lg font-medium text-gray-700">¿En qué podemos ayudarte?</h1>
                             <form className="mt-6">
                                 <div className="flex-1">
                                     <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Nombre completo</label>
-                                    <input type="text" placeholder="Miguel Chan" className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                    <input type="text" placeholder="Nombre" className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                                 </div>
                                 <div className="flex-1 mt-6">
                                     <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Correo electrónico</label>
-                                    <input type="email" placeholder="miguelchan@example.com" className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                    <input type="email" placeholder="correo@hotmail.com" className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                                 </div>
                                 <div className="w-full mt-6">
                                     <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Mensaje</label>

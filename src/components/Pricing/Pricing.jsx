@@ -7,16 +7,16 @@ const Pricing = () => {
                     <div className="relative p-10 space-y-12 overflow-hidden lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8 rounded-xl">
                         <div className="relative flex flex-col p-8 bg-white border rounded-xl">
                             <div className="flex-1">
-                                <h3 className="text-xl font-semibold text-neutral-600">Basico</h3>
+                                <h3 className="text-xl font-semibold text-neutral-600">SmartBasic</h3>
                                 <p className="flex items-baseline mt-4 text-neutral-600">
-                                    <span className="text-5xl font-bold tracking-tight">$10,000</span>
-                                    <span className="ml-1 text-xl font-semibold">mxn</span>
+                                    <span className="text-5xl font-bold tracking-tight">$9,200</span>
+                                    <span className="ml-1 text-xl font-semibold">MXN</span>
                                 </p>
-                                <p className="mt-6 text-gray-500 text-justify">Con el paquete SmartBasic podras tener acceso a tutoriales detallados
-                                    para un mejor manejo de tu Drinker y soporte basico para dudas o preguntas
+                                <p className="mt-6 text-gray-500 text-justify">Con el paquete SmartBasic tendrás acceso a tutoriales detallados
+                                    para un mejor manejo de tu Drinker y soporte básico para dudas o preguntas.
                                 </p>
                                 <ul role="list" className="pt-6 mt-6 space-y-6 border-t">
-                                    <span className="text-lg font-semibold text-neutral-600">¿Que contiene?</span>
+                                    <span className="text-lg font-semibold text-neutral-600">¿Qué incluye?</span>
                                     <li className="flex">
                                         <div className="inline-flex items-center bg-black rounded-xl w-6 h-6">
                                             <svg className="flex-shrink-0 w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" aria-hidden="true">
@@ -44,22 +44,21 @@ const Pricing = () => {
                                 </ul>
                             </div>
                             <div className="mt-6 rounded-lg">
-                                <a href='/servicios#basico' type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Contratar </a>
+                                <a href='/servicios' type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Contratar </a>
                             </div>
                         </div>
                         <div className="relative flex flex-col p-8 bg-black border rounded-2xl">
                             <div className="relative flex-1">
-                                <h3 className="text-xl font-semibold text-white">Intermedio</h3>
+                                <h3 className="text-xl font-semibold text-white">SmartInter</h3>
                                 <p className="flex items-baseline mt-4 text-white">
-                                    <span className="text-5xl font-bold tracking-tight text-white">$15,000</span>
-                                    <span className="ml-1 text-xl font-semibold text-white">mxn</span>
+                                    <span className="text-5xl font-bold tracking-tight text-white">$11,400</span>
+                                    <span className="ml-1 text-xl font-semibold text-white">MXN</span>
                                 </p>
-                                <p className="mt-6 text-white text-solitud line-clamp-5 text-justify">Con el paquete SmartInter podras contar con una capacitación
-                                    completa al personal para un mejor funcionamiento y durabilidad
-                                    del drinker, asi como soporte remoto, algo que facilita mucho
-                                    en cuestión a dudas o preguntas y algunas actualizaciones.</p>
+                                <p className="mt-6 text-white text-solitud line-clamp-5 text-justify">Con el paquete SmartInter obtendrás la capacitación
+                                    completa para el personal, de esta manera se tendrá  un mejor funcionamiento y durabilidad
+                                    del Drinker.</p>
                                 <ul role="list" className="pt-6 mt-6 space-y-6 border-t">
-                                    <span className="text-lg font-semibold text-white">¿Que incluye?</span>
+                                    <span className="text-lg font-semibold text-white">¿Qué incluye?</span>
                                     <li className="flex">
                                         <div className="inline-flex items-center w-6 h-6 bg-white rounded-xl">
                                             <svg className="flex-shrink-0 w-4 h-4 mx-auto text-neutral-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -75,7 +74,7 @@ const Pricing = () => {
                                             </svg>
                                         </div>
                                         <span className="ml-3 text-white">Capacitación completa del personal en el manejo y uso de la aplicación
-                                            y el dispositivo.</span>
+                                            así como del dispositivo.</span>
                                     </li>
                                     <li className="flex">
                                         <div className="inline-flex items-center w-6 h-6 bg-white rounded-xl">
@@ -83,7 +82,7 @@ const Pricing = () => {
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
-                                        <span className="ml-3 text-white">Soporte remoto para resolver cualquier consulta o problema</span>
+                                        <span className="ml-3 text-white">Soporte remoto para resolver cualquier duda o problema.</span>
                                     </li>
                                     <li className="flex">
                                         <div className="inline-flex items-center w-6 h-6 bg-white rounded-xl">
@@ -91,39 +90,32 @@ const Pricing = () => {
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
-                                        <span className="ml-3 text-white">Actualizaciones gratuitas para mejorar y agregar nuevas funcionalidades
-                                            a la solución.</span>
+                                        <span className="ml-3 text-white">Actualizaciones gratuitas para mejorar y agregar nuevas funcionalidades.</span>
                                     </li>
                                 </ul>
                             </div>
                             <div className="z-50 mt-6 rounded-lg">
-                                <a href="/pricing" type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 bg-white"> Contratar </a>
+                                <a href='/servicios' type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 bg-white"> Contratar </a>
                             </div>
                         </div>
                         <div className="relative flex flex-col p-8 bg-white border rounded-xl">
                             <div className="flex-1">
-                                <h3 className="text-xl font-semibold text-neutral-600">Profesional</h3>
+                                <h3 className="text-xl font-semibold text-neutral-600">SmartPro</h3>
                                 <p className="flex items-baseline mt-4 text-neutral-600">
-                                    <span className="text-5xl font-bold tracking-tight">$25,000</span>
-                                    <span className="ml-1 text-xl font-semibold">mxn</span>
+                                    <span className="text-5xl font-bold tracking-tight">$13,000</span>
+                                    <span className="ml-1 text-xl font-semibold">MXN</span>
                                 </p>
-                                <p className="mt-6 text-gray-500 line-clamp-5 text-justify">Con el paquete SmartPro podras elegir el diseño de tu preferencia
-                                    para tu Drinker. Asi como capacitaciones completas al personal para
-                                    un mejor funcionamiento y durabilidad del drinker, mejor manejo de la
-                                    app para ser mas eficaz.Tambien contaras con soporte 24/7, algo que
-                                    facilita mucho ya que siempre estaremos a tu disposición y seras el
-                                    primero en tener las mejores actualizaciones para estar siempre preparado
-                                    y lo mejor una web para que puedas promocionar tu servicio y atraer a
-                                    tus clientes.</p>
+                                <p className="mt-6 text-gray-500 line-clamp-5 text-justify">Con el paquete SmartPro podrás elegir el diseño de tu preferencia
+                                    para tu Drinker. Asi como capacitaciones completas al personal, Soporte técnico 24/7 más.</p>
                                 <ul role="list" className="pt-6 mt-6 space-y-6 border-t">
-                                    <span className="text-lg font-semibold text-neutral-600">¿Que contiene?</span>
+                                    <span className="text-lg font-semibold text-neutral-600">¿Qué incluye?</span>
                                     <li className="flex">
                                         <div className="inline-flex items-center bg-black rounded-xl w-6 h-6">
                                             <svg className="flex-shrink-0 w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" aria-hidden="true">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
-                                        <span className="ml-3 text-neutral-600">Instalación personalizada con la posibilidad de elegir entre tres diseños</span>
+                                        <span className="ml-3 text-neutral-600">Instalación personalizada con la posibilidad de elegir entre tres <a href="/">diseños</a> .</span>
                                     </li>
                                     <li className="flex">
                                         <div className="inline-flex items-center bg-black rounded-xl w-6 h-6">
@@ -131,7 +123,7 @@ const Pricing = () => {
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
-                                        <span className="ml-3 text-neutral-600">Capacitación continua y constante del personal</span>
+                                        <span className="ml-3 text-neutral-600">Capacitación continúa y constante al personal.</span>
                                     </li>
                                     <li className="flex">
                                         <div className="inline-flex items-center bg-black rounded-xl w-6 h-6">
@@ -139,7 +131,7 @@ const Pricing = () => {
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
-                                        <span className="ml-3 text-neutral-600">Creación de una página web personalizada para promocionar tu servicio y atraer al público</span>
+                                        <span className="ml-3 text-neutral-600">Creación de una página web personalizada para promocionar tus servicios al público.</span>
                                     </li>
                                     <li className="flex">
                                         <div className="inline-flex items-center bg-black rounded-xl w-6 h-6">
@@ -155,12 +147,12 @@ const Pricing = () => {
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
-                                        <span className="ml-3 text-neutral-600">Actualizaciones periódicas para mantener la solución actualizada y optimizada.</span>
+                                        <span className="ml-3 text-neutral-600">Actualizaciones periódicas para mantenerte actualizado.</span>
                                     </li>
                                 </ul>
                             </div>
                             <div className="mt-6 rounded-lg">
-                                <a href='/servicios#profesional' type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Contratar </a>
+                                <a href='/servicios' type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Contratar </a>
                             </div>
                         </div>
                     </div>
