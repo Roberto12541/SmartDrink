@@ -29,7 +29,7 @@ const Checkout = () => {
         const orden = {
             items: carrito.map(producto => ({
                 id: producto.item.id,
-                title: producto.item.title,
+                title: producto.item.name,
                 price: producto.item.price,
                 cantidad: producto.cantidad
             })),
@@ -65,7 +65,7 @@ const Checkout = () => {
                                 <ul className="-my-4 divide-y divide-gray-100">
                                     {carrito.map(producto =>
                                         <li className="flex items-center gap-4 py-4" key={producto.id}>
-                                            <img src={producto.item.image} alt="" className="h-16 w-16 rounded object-fill"/>
+                                            <img src={producto.item.image} alt="" className="h-16 w-16 rounded object-fill" />
                                             <div>
                                                 <h3 className="text-sm text-gray-900 line-clamp-1">{producto.item.name}</h3>
                                                 <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
@@ -91,95 +91,37 @@ const Checkout = () => {
                     <div className="mx-auto max-w-lg px-4 lg:px-8">
                         <form className="grid grid-cols-6 gap-4" onSubmit={handleCheckout}>
                             <div className="col-span-3">
-                                <label
-                                    htmlFor="FirstName"
-                                    className="block text-xs font-medium text-gray-700"
-                                >
-                                    Nombre(s)
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="Nombre"
-                                    className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                                    value={nombre} onChange={(e) => setNombre(e.target.value)}
-                                />
+                                <label htmlFor="FirstName" className="block text-sm font-medium text-gray-700">Nombre(s)</label>
+                                <input type="text" id="Nombre" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={nombre} onChange={(e) => setNombre(e.target.value)} />
                             </div>
 
                             <div className="col-span-3">
-                                <label
-                                    htmlFor="LastName"
-                                    className="block text-xs font-medium text-gray-700"
-                                >
-                                    Apellido Paterno
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="Paterno"
-                                    className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                                    value={paterno} onChange={(e) => setPaterno(e.target.value)}
-                                />
+                                <label htmlFor="LastName" className="block text-sm font-medium text-gray-700">Apellido Paterno</label>
+                                <input type="text" id="Paterno" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={paterno} onChange={(e) => setPaterno(e.target.value)} />
                             </div>
 
                             <div className="col-span-3">
-                                <label htmlFor="Email" className="block text-xs font-medium text-gray-700">
-                                    Apellido Materno
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="Materno"
-                                    className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                                    value={materno} onChange={(e) => setMaterno(e.target.value)}
-                                />
+                                <label htmlFor="Email" className="block text-sm font-medium text-gray-700">Apellido Materno</label>
+                                <input type="text" id="Materno" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={materno} onChange={(e) => setMaterno(e.target.value)} />
                             </div>
 
                             <div className="col-span-3">
-                                <label htmlFor="Phone" className="block text-xs font-medium text-gray-700">
-                                    Telefono
-                                </label>
-
-                                <input
-                                    type="tel"
-                                    id="Telefono"
-                                    className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                                    value={telefono} onChange={(e) => setTelefono(e.target.value)}
-                                />
+                                <label htmlFor="Phone" className="block text-sm font-medium text-gray-700">Telefono</label>
+                                <input type="tel" id="Telefono" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
                             </div>
 
                             <div className="col-span-6">
-                                <label htmlFor="Email" className="block text-xs font-medium text-gray-700">
-                                    Correo electronico
-                                </label>
-
-                                <input
-                                    type="email"
-                                    id="email"
-                                    className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                                    value={email} onChange={(e) => setEmail(e.target.value)}
-                                />
+                                <label htmlFor="Email" className="block text-sm font-medium text-gray-700">Correo electronico</label>
+                                <input type="email" id="email" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={email} onChange={(e) => setEmail(e.target.value)} />
                             </div>
 
                             <div className="col-span-6">
-                                <label htmlFor="Email2" className="block text-xs font-medium text-gray-700">
-                                    Confirma tu correo electronico
-                                </label>
-
-                                <input
-                                    type="email"
-                                    id="email2"
-                                    className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                                    value={email2} onChange={(e) => setEmail2(e.target.value)}
-                                />
+                                <label htmlFor="Email2" className="block text-sm font-medium text-gray-700">Confirma tu correo electronico</label>
+                                <input type="email" id="email2" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={email2} onChange={(e) => setEmail2(e.target.value)} />
                             </div>
 
                             <div className="col-span-6">
-                                <button
-                                    className="block w-full rounded-md bg-black p-2.5 text-sm text-white transition hover:shadow-lg"
-                                >
-                                    Terminar Orden
-                                </button>
+                                <button className="block w-full border rounded-md bg-black p-2.5 text-sm text-white transition hover:shadow-lg hover:bg-white hover:text-black hover:border-black">Terminar Orden</button>
                             </div>
                         </form>
                         {
