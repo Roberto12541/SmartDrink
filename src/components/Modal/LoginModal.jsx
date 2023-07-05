@@ -24,11 +24,11 @@ const LoginModal = () => {
                         <span className="sr-only">Cerrar Login</span>
                     </button>
                     <div className="px-6 py-6 lg:px-8">
-                        <h3 className="mb-4 text-xl font-medium text-gray-900">Inicia Sesion en SmartDrink</h3>
+                        <h3 className="mb-4 text-xl font-medium text-gray-900">Inicia Sesión en SmartDrink</h3>
                         <form className="space-y-6" action="#">
                             <div>
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Correo electrónico</label>
-                                <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com" required />
+                                <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="correo@hotmail.com" required />
                             </div>
                             <div>
                                 <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">Contraseña</label>
