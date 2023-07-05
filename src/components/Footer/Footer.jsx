@@ -69,21 +69,15 @@ const Footer = () => {
                             <p className="font-medium text-white">Secciones</p>
                             <ul className="mt-6 space-y-4 text-sm">
                                 <li>
-                                    <a href="/productos" className="text-white transition hover:opacity-75">
-                                        Productos
-                                    </a>
+                                <Link to={'/productos'} className="text-white transition hover:opacity-75">Productos</Link>
                                 </li>
 
                                 <li>
-                                    <a href="/servicios" className="text-white transition hover:opacity-75">
-                                        Servicios
-                                    </a>
+                                <Link to={'/servicios'} className="text-white transition hover:opacity-75">Servicios</Link>
                                 </li>
 
                                 <li>
-                                    <a href="/nosotros#contac" className="text-white transition hover:opacity-75">
-                                        Contacto
-                                    </a>
+                                <Link to={'/nosotros'} className="text-white transition hover:opacity-75">Contacto</Link>
                                 </li>
                             </ul>
                         </div>
@@ -92,20 +86,16 @@ const Footer = () => {
                             <p className="font-medium text-white">Nosotros</p>
                             <ul className="mt-6 space-y-4 text-sm">
                                 <li>
-                                    <a href="#" className="text-white transition hover:opacity-75">
-                                    Quiénes somos
-                                    </a>
+                                <Link to={'/nosotros'} className="text-white transition hover:opacity-75">Quienes somos</Link>
                                 </li>
 
                                 <li>
-                                <Link to={'/#nosotros'} className="text-white transition hover:opacity-75">Mision</Link>
+                                <Link to={'/nosotros'} className="text-white transition hover:opacity-75">Misión </Link>
                                     
                                 </li>
 
                                 <li>
-                                    <a href="#" className="text-white transition hover:opacity-75">
-                                        Visión
-                                    </a>
+                                <Link to={'/nosotros'} className="text-white transition hover:opacity-75">Visión</Link>
                                 </li>
                             </ul>
                         </div>
