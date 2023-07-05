@@ -16,7 +16,7 @@ const StockCount = ({ initial, stock, funcionAgregar }) => {
     }
 
     return (
-        <div className="flex gap-2">
+        <div className="flex flex-col gap-2 lg:flex-row">
             <div>
                 <label htmlFor="Quantity" className="sr-only"> Stock </label>
                 <div className="flex items-center border border-gray-200 rounded">

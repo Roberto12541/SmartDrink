@@ -5,17 +5,10 @@ const CartItem = ({ item, cantidad }) => {
     const { eliminarProducto } = useContext(CarritoContext);
     return (
         <li className="flex items-center gap-4">
-            <img
-                src={item.image}
-                alt=""
-                className="h-16 w-16 rounded object-fill"
-            />
-
+            <img src={item.image} alt="" className="h-16 w-16 rounded object-fill"/>
             <div>
-                <h3 className="text-sm text-gray-900">{item.title}</h3>
-
+                <h3 className="text-sm text-gray-900 line-clamp-1">{item.name}</h3>
                 <dl className="mt-0.5 space-y-px text-[14px] text-gray-600">
-
                     <div>
                         <dt className="inline">Precio:</dt>
                         <dd className="inline"> ${item.price}</dd>

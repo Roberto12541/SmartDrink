@@ -54,6 +54,9 @@ const ItemListContainer = () => {
                                     <Link to={'/productos'} href="#" className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700" role="menuitem" onClick={changeState}>Todos los productos</Link>
                                     <Link to={'/productos/Luces'} href="#" className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700" role="menuitem" onClick={changeState}>Luces</Link>
                                     <Link to={'/productos/Apagadores'} href="#" className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700" role="menuitem" onClick={changeState}>Apagadores</Link>
+                                    <Link to={'/productos/Limpieza'} href="#" className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700" role="menuitem" onClick={changeState}>Limpieza</Link>
+                                    <Link to={'/productos/Aire-Acondicionado'} href="#" className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700" role="menuitem" onClick={changeState}>Aire-Acondicionado</Link>
+                                    <Link to={'/productos/Enchufes'} href="#" className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700" role="menuitem" onClick={changeState}>Enchufes</Link>
                                 </div>
                             </div>
                         }
@@ -71,6 +74,9 @@ const ItemListContainer = () => {
                                 <Link to={'/productos'} className='text-gray-700 text-sm font-medium'>Todos los productos</Link>
                                 <Link to={'/productos/Luces'} className='text-gray-700 text-sm font-medium'>Luces</Link>
                                 <Link to={'/productos/Apagadores'} className='text-gray-700 text-sm font-medium'>Apagadores</Link>
+                                <Link to={'/productos/Limpieza'} className='text-gray-700 text-sm font-medium'>Limpieza</Link>
+                                <Link to={'/productos/Aire-Acondicionado'} className='text-gray-700 text-sm font-medium'>Aire-Acondicionado</Link>
+                                <Link to={'/productos/Enchufes'} className='text-gray-700 text-sm font-medium'>Enchufes</Link>
                             </ul>
                         </div>
                     </div>

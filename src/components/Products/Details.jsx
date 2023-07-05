@@ -20,12 +20,12 @@ const Details = ({ id, name, category, image, price, stock, description }) => {
             <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-contain object-center rounded" src={image} />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                 <h2 className="text-sm title-font text-gray-500 tracking-widest">{category}</h2>
-                <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{name}</h1>
+                <h1 className="text-gray-900 title-font font-medium mb-1 text-lg line-clamp-3 sm:line-clamp-none md:text-2xl">{name}</h1>
                 <div className="flex mb-4">
                     <span className="text-lg">Stock: {stock} disponibles</span>
                 </div>
                 <p className="leading-relaxed">{description}</p>
-                <div className="flex mt-4 justify-between">
+                <div className="flex flex-col gap-4 items-center mt-4 justify-between sm:flex-row ">
                     <span className="title-font font-medium text-4xl text-gray-900">${price}.00</span>
                     {
                         cantidad > 0 ?

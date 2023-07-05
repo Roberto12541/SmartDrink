@@ -91,6 +91,9 @@ const SearchContainer = () => {
                                 <Link to={'/productos'} className='text-gray-700 text-sm font-medium'>Todos los productos</Link>
                                 <Link to={'/productos/Luces'} className='text-gray-700 text-sm font-medium'>Luces</Link>
                                 <Link to={'/productos/Apagadores'} className='text-gray-700 text-sm font-medium'>Apagadores</Link>
+                                <Link to={'/productos/Limpieza'} className='text-gray-700 text-sm font-medium'>Limpieza</Link>
+                                <Link to={'/productos/Aire-Acondicionado'} className='text-gray-700 text-sm font-medium'>Aire-Acondicionado</Link>
+                                <Link to={'/productos/Enchufes'} className='text-gray-700 text-sm font-medium'>Enchufes</Link>
                             </ul>
                         </div>
                     </div>

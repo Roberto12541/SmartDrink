@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CarritoContext } from "../../context/CartContext.jsx";
 import CartItem from "../CartItem/CartItem.jsx";
+import CartEmpty from "../../assets/cart_empty.png"
 
 const Cart = () => {
     const { carrito, vaciarCarrito } = useContext(CarritoContext);
@@ -12,16 +13,16 @@ const Cart = () => {
         return (
             <>
                 <section>
-                    <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+                    <div className="h-[80vh] flex items-center mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
                         <div className="mx-auto max-w-3xl">
                             <header className="text-center">
                                 <h1 className="text-xl font-bold text-gray-900 sm:text-3xl">Carrito de compras</h1>
                             </header>
 
                             <div className="mt-8 flex items-center flex-col gap-12">
-                                <img src="https://i.ibb.co/kXVtgs3/shoppinh-Cart-Empty.png" alt="" srcset="" className="w-64" />
-                                <h2 className="text-xl text-gray-600">No hay productos en el carrito</h2>
-                                <Link to={'/'} className="flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Seguir comprando</Link>
+                                <img src={CartEmpty} alt="" className="w-64" />
+                                <h2 className="text-2xl text-gray-600">No hay productos en el carrito.</h2>
+                                <Link to={'/productos'} className="flex text-white bg-black border py-2 px-6 hover:bg-white hover:text-black hover:border-black rounded transition duration-500 ease-in-out">Seguir comprando</Link>
                             </div>
                         </div>
                     </div>
@@ -32,7 +33,7 @@ const Cart = () => {
 
     return (
         <section>
-            <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+            <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 h-screen">
                 <div className="mx-auto max-w-3xl">
                     <header className="text-center">
                         <h1 className="text-xl font-bold text-gray-900 sm:text-3xl">Carrito de compras</h1>

@@ -23,6 +23,7 @@ import SearchContainer from './components/Products/SearchContainer';
 // import Details from './components/Products/Details.jsx';
 import ProductDetails from './components/Products/ProductDetails.jsx';
 import Cart from './components/Cart/Cart.jsx';
+import Checkout from './components/Checkout/Checkout.jsx';
 // import LoginModal from './components/Modal/LoginModal';
 // import Category from './components/Products/Category';
 // import AppSectionTwo from './components/Section/AppSectionTwo';
@@ -53,6 +54,13 @@ function App() {
               <Pricing/>
               <Comparation/>
               <AppSection/>
+              <Footer/>
+            </>
+          }/>
+          <Route path='/checkout' element={
+            <>
+              
+              <Checkout/> 
               <Footer/>
             </>
           }/>
