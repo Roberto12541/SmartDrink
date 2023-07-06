@@ -25,7 +25,7 @@ const Login = () => {
 
         const productos = query(
             collection(db, 'users'),
-            where('name', '==', email),
+            where('email', '==', email),
             where('password', '==', password))
         getDocs(productos)
             .then(res => {
