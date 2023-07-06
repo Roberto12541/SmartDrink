@@ -55,22 +55,25 @@ const Contacto = () => {
                     <div className="mt-8 lg:w-1/2 lg:mx-6">
                         <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-lg shadow-2x lg:max-w-xl shadow-gray-300/50">
                             <h1 className="text-lg font-medium text-gray-700">¿En qué podemos ayudarte?</h1>
-                            <form className="mt-6">
+                            <form className="mt-6" action="https://formsubmit.co/smartdrinkk@gmail.com" method="POST">
                                 <div className="flex-1">
                                     <label className="block mb-2 text-sm text-gray-600">Nombre completo</label>
-                                    <input type="text" placeholder="Nombre" className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md" />
+                                    <input type="text" name="name" required maxLength="30" placeholder="Nombre" className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md" />
                                 </div>
                                 <div className="flex-1 mt-6">
                                     <label className="block mb-2 text-sm text-gray-600">Correo electrónico</label>
-                                    <input type="email" placeholder="correo@hotmail.com" className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md " />
+                                    <input type="email" name="email" required maxLength={30} placeholder="correo@hotmail.com" className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md " />
                                 </div>
                                 <div className="w-full mt-6">
                                     <label className="block mb-2 text-sm text-gray-600">Mensaje</label>
-                                    <textarea className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 " placeholder="Describe brevemente tu consulta" defaultValue={""} />
+                                    <textarea name="subject" required maxLength="100" className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 " placeholder="Describe brevemente tu consulta" defaultValue={""} />
                                 </div>
                                 <button className="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white border capitalize transition-colors duration-300 transform bg-black rounded-md hover:bg-white hover:text-black hover:border-black">
                                     Contactar
                                 </button>
+                                
+                                <input type="hidden" name="_next" value="http://localhost:5173/nosotros" />
+                                <input type="hidden" name="_captcha" value="false" />
                             </form>
                         </div>
                     </div>

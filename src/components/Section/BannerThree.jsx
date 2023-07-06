@@ -10,11 +10,11 @@ const BannerThree = () => {
                             Drinker.
                         </h1>
                         <p className="mt-6 text-xl text-slate-500 text-justify">
-                            Conoce nuestro producto de subtitulo
+                            Conoce nuestro producto!
                         </p>
                         <p className="mt-6 text-xl text-slate-900 text-justify">
-                            Comprometidos con la innovación, creatividad y servicio para que puedas brindar
-                            la mejor experiencia a tus clientes con un estilo original.
+                        Te presentamos nuestro innovador producto, diseñado especialmente para satisfacer tus necesidades y superar tus expectativas,
+Un dispositivo que combina funcionalidad, elegancia y rendimiento excepcionales en un solo paquete.  ¿Quieres destacar entre la multitud? Con nuestro producto, podrás hacerlo. No pierdas la oportunidad de adquirir este increíble producto y adquiere tu PlanSmartDrink.
                         </p>
                     </div>
                     <div>
