@@ -26,6 +26,22 @@ const Checkout = () => {
             return;
         }
 
+        // carrito.map(producto => {
+        //     const updateDocument = async () => {
+        //         console.log(producto.cantidad);
+        //         try {
+        //             const docRef = collection(db, 'products').doc(producto.item.id);
+        //             console.log(docRef.id);
+        //             await docRef.update({
+        //                 stock: docRef.stock - producto.cantidad,
+        //             });
+        //         } catch (error) {
+        //             console.error('Error al actualizar el documento:', error);
+        //         }
+        //     };
+        //     updateDocument();
+        // })
+
         const orden = {
             items: carrito.map(producto => ({
                 id: producto.item.id,
@@ -112,27 +128,27 @@ const Checkout = () => {
                         <form className="grid grid-cols-6 gap-4" onSubmit={handleCheckout}>
                             <div className="col-span-3">
                                 <label htmlFor="FirstName" className="block text-sm font-medium text-gray-700">Nombre(s)</label>
-                                <input type="text" id="Nombre" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={nombre} onChange={(e) => setNombre(e.target.value)} readOnly/>
+                                <input type="text" id="Nombre" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={nombre} onChange={(e) => setNombre(e.target.value)} readOnly />
                             </div>
 
                             <div className="col-span-3">
                                 <label htmlFor="LastName" className="block text-sm font-medium text-gray-700">Apellido Paterno</label>
-                                <input type="text" id="Paterno" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={paterno} onChange={(e) => setPaterno(e.target.value)} readOnly/>
+                                <input type="text" id="Paterno" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={paterno} onChange={(e) => setPaterno(e.target.value)} readOnly />
                             </div>
 
                             <div className="col-span-3">
                                 <label htmlFor="Email" className="block text-sm font-medium text-gray-700">Apellido Materno</label>
-                                <input type="text" id="Materno" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={materno} onChange={(e) => setMaterno(e.target.value)} readOnly/>
+                                <input type="text" id="Materno" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={materno} onChange={(e) => setMaterno(e.target.value)} readOnly />
                             </div>
 
                             <div className="col-span-3">
                                 <label htmlFor="Phone" className="block text-sm font-medium text-gray-700">Telefono</label>
-                                <input type="tel" id="Telefono" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={telefono} onChange={(e) => setTelefono(e.target.value)}/>
+                                <input type="tel" id="Telefono" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
                             </div>
 
                             <div className="col-span-6">
                                 <label htmlFor="Email" className="block text-sm font-medium text-gray-700">Correo electronico</label>
-                                <input type="email" id="email" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={email} onChange={(e) => setEmail(e.target.value)} readOnly/>
+                                <input type="email" id="email" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={email} onChange={(e) => setEmail(e.target.value)} readOnly />
                             </div>
 
                             <div className="col-span-6">
