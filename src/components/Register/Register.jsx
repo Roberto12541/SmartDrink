@@ -65,19 +65,17 @@ const Register = () => {
                             Crea tu cuenta en SmartDrink
                         </h1>
                         <p className="mt-4 leading-relaxed text-gray-500">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam
-                            dolorum aliquam, quibusdam aperiam voluptatum.
-                        </p>
+                        Completa todos los campos para poder comprar los productos de tu preferencia.                         </p>
                         <form onSubmit={handleRegister} className="mt-8 grid grid-cols-6 gap-6">
                             <div className="col-span-6 sm:col-span-3">
                                 <label htmlFor="FirstName" className="block text-sm font-medium text-gray-700">
                                     Nombre(s)
                                 </label>
-                                <input type="text" id="FirstName" name="first_name" className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2 border" value={name} onChange={(e) => setName(e.target.value)} />
+                                <input type="text" id="FirstName" name="first_name" required maxLength="20" className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2 border" value={name} onChange={(e) => setName(e.target.value)} />
                             </div>
 
                             <div className="col-span-6 sm:col-span-3">
-                                <label htmlFor="LastName" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="LastName" required maxLength="20" className="block text-sm font-medium text-gray-700">
                                     Apellido paterno
                                 </label>
 
@@ -85,14 +83,14 @@ const Register = () => {
                             </div>
 
                             <div className="col-span-6 sm:col-span-3">
-                                <label htmlFor="FirstName" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="FirstName" required maxLength="20" className="block text-sm font-medium text-gray-700">
                                     Apellido paterno
                                 </label>
                                 <input type="text" id="FirstName" name="first_name" className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2 border" value={materno} onChange={(e) => setMaterno(e.target.value)} />
                             </div>
 
                             <div className="col-span-6 sm:col-span-3">
-                                <label htmlFor="LastName" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="LastName"required  maxLength="8" className="block text-sm font-medium text-gray-700">
                                     Fecha de Nacimiento
                                 </label>
                                 <input type="date" id="LastName" name="last_name" className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2 border" value={date} onChange={(e) => setDate(e.target.value)} />
@@ -102,11 +100,11 @@ const Register = () => {
                                 <label htmlFor="Email" className="block text-sm font-medium text-gray-700">
                                     Correo electrónico
                                 </label>
-                                <input type="email" id="Email" name="email" className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2 border" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <input type="email" required id="Email" name="email" className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2 border" value={email} onChange={(e) => setEmail(e.target.value)} />
                             </div>
 
                             <div className="col-span-6 sm:col-span-3">
-                                <label htmlFor="Password" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="Password" required className="block text-sm font-medium text-gray-700">
                                     Contraseña
                                 </label>
                                 <input type="password" id="Password" name="password" className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2 border" value={password} onChange={(e) => setPassword(e.target.value)} />
@@ -117,7 +115,7 @@ const Register = () => {
                                     Confirmar contraseña
                                 </label>
 
-                                <input type="password" id="PasswordConfirmation" name="password_confirmation" className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2 border" value={password2} onChange={(e) => setPassword2(e.target.value)} />
+                                <input type="password" required id="PasswordConfirmation" name="password_confirmation" className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2 border" value={password2} onChange={(e) => setPassword2(e.target.value)} />
                             </div>
 
                             <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
