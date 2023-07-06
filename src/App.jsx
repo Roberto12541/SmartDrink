@@ -18,6 +18,7 @@ import ProductDetails from './components/Products/ProductDetails.jsx';
 import Cart from './components/Cart/Cart.jsx';
 import Checkout from './components/Checkout/Checkout.jsx';
 import BannerThree from './components/Section/BannerThree.jsx';
+import Login from './components/Section/Login.jsx';
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
           }/>
           <Route path='/cart' element={
             <><Cart/><Footer/></>
+          }/>
+          <Route path='/login' element={
+            <><Login/><Footer/></>
           }/>
           <Route path='/productos' element={
             <><ItemListContainer/><Footer/></>
