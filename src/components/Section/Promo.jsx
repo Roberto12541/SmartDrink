@@ -11,7 +11,7 @@ const Promo = () => {
                         </h1>
                         <p className="mt-6 text-xl text-gray-500 text-justify">
                             Comprometidos con la innovación, creatividad y servicio para que puedas brindar
-                            la mejor experiencia a tus clientes con un estilo original.
+                            la mejor experiencia a tus clientes con un estilo original. <br></br><br></br>Con nuestra app móvil tu clientes podrán pedir su bebida preferida, personalizarla y pagarla desde su celular .
                         </p>
                     </div>
                     <div>

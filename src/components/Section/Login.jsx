@@ -55,7 +55,7 @@ const Login = () => {
                 <div className="mx-auto max-w-lg text-center">
                     <h1 className="text-2xl font-bold sm:text-3xl">Inicia Sesión en SmartDrink</h1>
                     <p className="mt-4 text-gray-500">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit molestiae enim obcaecati voluptas. Omnis, ut.
+                        Para poder realizar tus compras 100% seguras.
                     </p>
                 </div>
 
