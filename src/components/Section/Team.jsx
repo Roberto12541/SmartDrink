@@ -15,7 +15,7 @@ const Team = () => {
                         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                             <img alt="team" className="flex-shrink-0 rounded-full w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={miguel} />
                             <div className="flex-grow sm:pl-8">
-                                <h2 className="title-font font-medium text-lg text-white">Miguel Angel Chan V.</h2>
+                                <h2 className="title-font font-medium text-lg text-white">Miguel Ángel Chan V.</h2>
                                 <h3 className="text-gray-500 mb-3">Lider de proyecto</h3>
                                 <span className="inline-flex">
                                     <a href='https://www.facebook.com/macv2002' target='_blank' className="text-gray-500">
@@ -41,7 +41,7 @@ const Team = () => {
                         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                             <img alt="team" className="flex-shrink-0 rounded-full w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={roberto} />
                             <div className="flex-grow sm:pl-8">
-                                <h2 className="title-font font-medium text-lg text-white">Roberto Adrian Miranda M.</h2>
+                                <h2 className="title-font font-medium text-lg text-white">Roberto Adrián  Miranda M.</h2>
                                 <h3 className="text-gray-500 mb-3">Desarrollador</h3>
                                 <span className="inline-flex">
                                     <a href='https://www.facebook.com/profile.php?id=100010329643690' target='_blank' className="text-gray-500">
@@ -94,7 +94,7 @@ const Team = () => {
                         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                             <img alt="team" className="flex-shrink-0     w-48 h-48 object-cover object-center sm:mb-0 mb-4 rounded-full" src={luis} />
                             <div className="flex-grow sm:pl-8">
-                                <h2 className="title-font font-medium text-lg text-white">Jose Luis Oro C.</h2>
+                                <h2 className="title-font font-medium text-lg text-white">José Luis Oro C.</h2>
                                 <h3 className="text-gray-500 mb-3">Diseñador</h3><br></br>
                                 <span className="inline-flex">
                                     <a href='' className="text-gray-500">

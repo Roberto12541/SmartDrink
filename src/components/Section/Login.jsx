@@ -54,7 +54,7 @@ const Login = () => {
                 <div className="mx-auto max-w-lg text-center">
                     <h1 className="text-2xl font-bold sm:text-3xl">Inicia Sesión en SmartDrink</h1>
                     <p className="mt-4 text-gray-500">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit molestiae enim obcaecati voluptas. Omnis, ut.
+                        Para poder realizar tus compras 100% seguras.
                     </p>
                 </div>
 
@@ -87,7 +87,7 @@ const Login = () => {
                     <div className="flex items-center justify-between">
                         <p className="text-sm text-gray-500">
                             ¿No tienes cuenta?
-                            <a className="ml-1 underline" href="">Registrate aquí</a>
+                            <a className="ml-1 underline text-blue-800 text-" href="">Registrate aquí</a>
                         </p>
 
                         <button type="submit" className="inline-block border rounded-lg bg-black px-5 py-3 text-sm font-medium text-white">

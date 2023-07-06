@@ -14,7 +14,7 @@ const BannerThree = () => {
                         </p>
                         <p className="mt-6 text-xl text-slate-900 text-justify">
                         Te presentamos nuestro innovador producto, diseñado especialmente para satisfacer tus necesidades y superar tus expectativas,
-Un dispositivo que combina funcionalidad, elegancia y rendimiento excepcionales en un solo paquete.  ¿Quieres destacar entre la multitud? Con nuestro producto, podrás hacerlo. No pierdas la oportunidad de adquirir este increíble producto y adquiere tu PlanSmartDrink.
+Un dispositivo que combina funcionalidad, elegancia y rendimiento excepcionales en un solo paquete.  ¿Quieres destacar entre la multitud? Con nuestro producto, podrás hacerlo. No pierdas la oportunidad de adquirir este increíble producto y adquiere tu Plan SmartDrink.
                         </p>
                     </div>
                     <div>
