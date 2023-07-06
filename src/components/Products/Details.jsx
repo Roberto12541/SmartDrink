@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import StockCount from "./StockCount";
 
-
 const Details = ({ id, name, category, image, price, stock, description }) => {
     const [cantidad, setCantidad] = useState(0)
     const { agregarProducto } = useContext(CarritoContext);

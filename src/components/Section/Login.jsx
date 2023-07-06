@@ -1,13 +1,12 @@
-import { useAuth } from "../../hooks/auth.js"
-import { useState } from "react"
-import { collection, where, getDocs, doc, query } from 'firebase/firestore'
+import { useState, useContext } from "react"
+import { collection, where, getDocs, query } from 'firebase/firestore'
 import { db } from "../../services/firebase"
 import { useNavigate } from 'react-router-dom'
 import { Link } from "react-router-dom"
-// import { useLocation } from "react-router-dom"
+import { LoginContext } from "../../context/LoginContext"
 
 const Login = () => {
-    const auth = useAuth();
+    const { Login } = useContext(LoginContext)
     const history = useNavigate();
     const [usuario, setUsuario] = useState();
     const [email, setEmail] = useState("")
@@ -21,30 +20,26 @@ const Login = () => {
             return;
         }
 
-        console.log(auth);
-
-        const productos = query(
+        const usuario = query(
             collection(db, 'users'),
             where('email', '==', email),
             where('password', '==', password))
-        getDocs(productos)
+        getDocs(usuario)
             .then(res => {
-                const newProductos = res.docs.map(doc => {
+                const newUser = res.docs.map(doc => {
                     const data = doc.data()
                     return { id: doc.id, ...data }
                 })
-                setUsuario(newProductos)
-                if (usuario) {
+                if (newUser.length > 0) {
+                    console.log("s");
+                    setUsuario(newUser)
                     setError('')
-                    window.localStorage.setItem(
-                        'userLogged', JSON.stringify(usuario)
-                    )
+                    Login(newUser)
                     history('/')
-                }else{
+                } else {
+                    console.log("f");
                     setError('Correo o contraseña incorrectos')
                 }
-                console.log(newProductos);
-                
             })
             .catch(error => console.log(error))
     }

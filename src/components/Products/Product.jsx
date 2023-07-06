@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom"
+import { useContext } from "react";
+import { LoginContext } from "../../context/LoginContext";
 
 const Product = ({ id, image, price, category, name }) => {
+    const { login } = useContext(LoginContext);
     return (
         <li key={id}>
-            <Link to={`/producto/${id}`} href="#" className="group relative block overflow-hidden rounded-2xl">
+            <Link to={login ? `/producto/${id}` : '/login'} href="#" className="group relative block overflow-hidden rounded-2xl">
                 <img src={image} alt="" className="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72"/>
                 <div className="relative border border-gray-100 bg-white p-6">
                     <span className="whitespace-nowrap bg-black px-3 py-1.5 text-xs font-medium rounded-lg text-white" > {category} </span>
@@ -11,7 +14,7 @@ const Product = ({ id, image, price, category, name }) => {
                     <p className="mt-1.5 text-sm text-gray-700">${price}.00</p>
                     <form className="mt-4">
                         <button className="block w-full rounded-xl bg-black p-4 text-sm font-medium transition hover:scale-105 text-white">
-                            Agregar al carrito
+                            Comprar
                         </button>
                     </form>
                 </div>
