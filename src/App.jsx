@@ -19,6 +19,7 @@ import Cart from './components/Cart/Cart.jsx';
 import Checkout from './components/Checkout/Checkout.jsx';
 import BannerThree from './components/Section/BannerThree.jsx';
 import Login from './components/Section/Login.jsx';
+import Register from './components/Register/Register.jsx';
 
 function App() {
   return (
@@ -44,6 +45,9 @@ function App() {
           }/>
           <Route path='/login' element={
             <><Login/><Footer/></>
+          }/>
+          <Route path='/register' element={
+            <><Register/><Footer/></>
           }/>
           <Route path='/productos' element={
             <><ItemListContainer/><Footer/></>

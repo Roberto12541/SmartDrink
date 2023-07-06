@@ -3,6 +3,7 @@ import { useState } from "react"
 import { collection, where, getDocs, doc, query } from 'firebase/firestore'
 import { db } from "../../services/firebase"
 import { useNavigate } from 'react-router-dom'
+import { Link } from "react-router-dom"
 // import { useLocation } from "react-router-dom"
 
 const Login = () => {
@@ -87,7 +88,7 @@ const Login = () => {
                     <div className="flex items-center justify-between">
                         <p className="text-sm text-gray-500">
                             ¿No tienes cuenta?
-                            <a className="ml-1 underline" href="">Registrate aquí</a>
+                            <Link to={'/register'} className="ml-1 underline" href="">Registrate aquí</Link>
                         </p>
 
                         <button type="submit" className="inline-block border rounded-lg bg-black px-5 py-3 text-sm font-medium text-white">
