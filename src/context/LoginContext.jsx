@@ -1,4 +1,5 @@
-import { useState, createContext } from "react";
+import { useState, createContext, useContext } from "react";
+import { CarritoContext } from "./CartContext";
 
 export const LoginContext = createContext({
     datos: [],
@@ -8,6 +9,7 @@ export const LoginContext = createContext({
 export const LoginProvider = ({ children }) => {
     const [datos, setDatos] = useState();
     const [login, setLogin] = useState(false);
+    const { vaciarCarrito } = useContext(CarritoContext);
 
     const Login = (datos) => {
         console.log("Connected");
@@ -19,6 +21,7 @@ export const LoginProvider = ({ children }) => {
         console.log("Disconnected");
         setDatos([]);
         setLogin(!login);
+        vaciarCarrito();
     }
 
     return (

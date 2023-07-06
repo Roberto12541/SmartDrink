@@ -1,31 +1,28 @@
 import { useState, useContext } from "react"
 import { CarritoContext } from "../../context/CartContext.jsx"
+import { LoginContext } from "../../context/LoginContext.jsx"
 import { db } from "../../services/firebase"
 import { collection, addDoc } from "firebase/firestore"
 import { useParams } from "react-router-dom"
 import Logo from "../../assets/Logo-mobile.png"
 
 const Checkout = () => {
+    const { datos } = useContext(LoginContext);
     const { carrito, vaciarCarrito } = useContext(CarritoContext);
     const { price, name } = useParams();
-    const [nombre, setNombre] = useState("")
-    const [paterno, setPaterno] = useState("")
-    const [materno, setMaterno] = useState("")
+    const [nombre, setNombre] = useState(datos[0].name)
+    const [paterno, setPaterno] = useState(datos[0].paterno)
+    const [materno, setMaterno] = useState(datos[0].materno)
     const [telefono, setTelefono] = useState("")
-    const [email, setEmail] = useState("")
-    const [email2, setEmail2] = useState("")
+    const [email, setEmail] = useState(datos[0].email)
+    const [direccion, setDireccion] = useState("")
     const [error, setError] = useState("")
     const [ordenId, setOrdenId] = useState("")
 
     const handleCheckout = (e) => {
         e.preventDefault();
-        if (!nombre || !paterno || !materno || !telefono || !email || !email2) {
+        if (!nombre || !paterno || !materno || !telefono || !email || !direccion) {
             setError('Por favor llena todo los datos')
-            return;
-        }
-
-        if (email !== email2) {
-            setError('Correos no coinciden')
             return;
         }
 
@@ -41,7 +38,8 @@ const Checkout = () => {
             paterno: paterno,
             materno: materno,
             telefono: telefono,
-            email: email
+            email: email,
+            direccion: direccion
         }
 
         addDoc(collection(db, 'ordenes'), orden)
@@ -114,32 +112,32 @@ const Checkout = () => {
                         <form className="grid grid-cols-6 gap-4" onSubmit={handleCheckout}>
                             <div className="col-span-3">
                                 <label htmlFor="FirstName" className="block text-sm font-medium text-gray-700">Nombre(s)</label>
-                                <input type="text" id="Nombre" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                                <input type="text" id="Nombre" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={nombre} onChange={(e) => setNombre(e.target.value)} readOnly/>
                             </div>
 
                             <div className="col-span-3">
                                 <label htmlFor="LastName" className="block text-sm font-medium text-gray-700">Apellido Paterno</label>
-                                <input type="text" id="Paterno" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={paterno} onChange={(e) => setPaterno(e.target.value)} />
+                                <input type="text" id="Paterno" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={paterno} onChange={(e) => setPaterno(e.target.value)} readOnly/>
                             </div>
 
                             <div className="col-span-3">
                                 <label htmlFor="Email" className="block text-sm font-medium text-gray-700">Apellido Materno</label>
-                                <input type="text" id="Materno" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={materno} onChange={(e) => setMaterno(e.target.value)} />
+                                <input type="text" id="Materno" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={materno} onChange={(e) => setMaterno(e.target.value)} readOnly/>
                             </div>
 
                             <div className="col-span-3">
                                 <label htmlFor="Phone" className="block text-sm font-medium text-gray-700">Telefono</label>
-                                <input type="tel" id="Telefono" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
+                                <input type="tel" id="Telefono" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={telefono} onChange={(e) => setTelefono(e.target.value)}/>
                             </div>
 
                             <div className="col-span-6">
                                 <label htmlFor="Email" className="block text-sm font-medium text-gray-700">Correo electronico</label>
-                                <input type="email" id="email" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <input type="email" id="email" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={email} onChange={(e) => setEmail(e.target.value)} readOnly/>
                             </div>
 
                             <div className="col-span-6">
-                                <label htmlFor="Email2" className="block text-sm font-medium text-gray-700">Confirma tu correo electronico</label>
-                                <input type="email" id="email2" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={email2} onChange={(e) => setEmail2(e.target.value)} />
+                                <label htmlFor="Email2" className="block text-sm font-medium text-gray-700">Direccion de envio</label>
+                                <textarea name="" id="" cols="30" rows="5" className="mt-2 w-full border rounded-md border-gray-200 shadow-sm sm:text-lg px-2 py-1" value={direccion} onChange={(e) => setDireccion(e.target.value)}></textarea>
                             </div>
 
                             <div className="col-span-6">
