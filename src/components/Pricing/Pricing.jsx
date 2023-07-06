@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom"
+import { LoginContext } from "../../context/LoginContext.jsx"
+import { useContext } from "react"
 
 const Pricing = () => {
+    const { datos } = useContext(LoginContext);
     return (
         <section>
             <div className="relative items-center w-full mx-auto md:px-12 lg:px-16 max-w-7xl">
@@ -46,7 +49,12 @@ const Pricing = () => {
                                 </ul>
                             </div>
                             <div className="mt-6 rounded-lg">
-                                <Link to={'/checkout/9200/SmartBasic'} type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Comprar ahora </Link>
+                                {
+                                    datos ?
+                                        <Link to={'/checkout/9200/SmartBasic'} type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Comprar ahora </Link>
+                                        :
+                                        <Link to={'/login'} type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Comprar ahora </Link>
+                                }
                             </div>
                         </div>
                         <div className="relative flex flex-col p-8 bg-black border rounded-2xl">
@@ -97,7 +105,12 @@ const Pricing = () => {
                                 </ul>
                             </div>
                             <div className="z-50 mt-6 rounded-lg">
-                                <Link to={'/checkout/11400/SmartInter'} type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Comprar ahora </Link>
+                                {
+                                    datos ?
+                                        <Link to={'/checkout/11400/SmartInter'} type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Comprar ahora </Link>
+                                        :
+                                        <Link to={'/login'} type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Comprar ahora </Link>
+                                }
                             </div>
                         </div>
                         <div className="relative flex flex-col p-8 bg-white border rounded-xl">
@@ -154,7 +167,12 @@ const Pricing = () => {
                                 </ul>
                             </div>
                             <div className="mt-6 rounded-lg">
-                                <Link to={'/checkout/13000/SmartPro'} type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Comprar ahora </Link>
+                                {
+                                    datos ?
+                                        <Link to={'/checkout/13000/SmartPro'} type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Comprar ahora </Link>
+                                        :
+                                        <Link to={'/login'} type="highlight" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black"> Comprar ahora </Link>
+                                }
                             </div>
                         </div>
                     </div>
