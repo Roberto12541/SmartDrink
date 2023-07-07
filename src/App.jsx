@@ -21,6 +21,7 @@ import Checkout from './components/Checkout/Checkout.jsx';
 import BannerThree from './components/Section/BannerThree.jsx';
 import Login from './components/Section/Login.jsx';
 import Register from './components/Register/Register.jsx';
+import BannerFour from './components/Section/BannerFour.jsx';
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
                 <><Carrusel /><Promo /><BannerThree /><Pricing /><AppSection /><Team /><BannerTwo /><Footer /></>
               } />
               <Route path='/servicios' element={
-                <><Pricing /><Comparation /><AppSection /><Footer /></>
+                <><BannerFour /> <Pricing /><Comparation />  <AppSection /><Footer /></>
               } />
               <Route path='/checkout' element={
                 <><Checkout /><Footer /></>
