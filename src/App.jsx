@@ -22,6 +22,8 @@ import BannerThree from './components/Section/BannerThree.jsx';
 import Login from './components/Section/Login.jsx';
 import Register from './components/Register/Register.jsx';
 import BannerFour from './components/Section/BannerFour.jsx';
+import PromoService from './components/Section/PromoService.jsx';
+import PromoProducts from './components/Section/PromoProducts.jsx';
 
 function App() {
   return (
@@ -32,7 +34,7 @@ function App() {
             <Navbar />
             <Routes>
               <Route path='/' element={
-                <><Carrusel /><Promo /><BannerThree /><Pricing /><AppSection /><Team /><BannerTwo /><Footer /></>
+                <><Carrusel /><Promo /><BannerThree /><Pricing /><PromoProducts/> <PromoService /><AppSection /><Team /><BannerTwo /><Footer /></>
               } />
               <Route path='/servicios' element={
                 <><BannerFour /> <Pricing /><Comparation />  <AppSection /><Footer /></>
