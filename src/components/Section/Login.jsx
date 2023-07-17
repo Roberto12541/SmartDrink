@@ -31,7 +31,6 @@ const Login = () => {
                     return { id: doc.id, ...data }
                 })
                 if (newUser.length > 0) {
-                    console.log("s");
                     setUsuario(newUser)
                     setError('')
                     Login(newUser)

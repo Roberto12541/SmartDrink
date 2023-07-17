@@ -26,22 +26,7 @@ const Checkout = () => {
             return;
         }
 
-        // carrito.map(producto => {
-        //     const updateDocument = async () => {
-        //         console.log(producto.cantidad);
-        //         try {
-        //             const docRef = collection(db, 'products').doc(producto.item.id);
-        //             console.log(docRef.id);
-        //             await docRef.update({
-        //                 stock: docRef.stock - producto.cantidad,
-        //             });
-        //         } catch (error) {
-        //             console.error('Error al actualizar el documento:', error);
-        //         }
-        //     };
-        //     updateDocument();
-        // })
-
+        const totalIns = carrito.reduce((total, producto) => total + (producto.item.price * producto.cantidad), 0);
         const orden = {
             items: carrito.map(producto => ({
                 id: producto.item.id,
@@ -49,7 +34,7 @@ const Checkout = () => {
                 price: producto.item.price,
                 cantidad: producto.cantidad
             })),
-            total: carrito.reduce((total, producto) => total + (producto.item.price * producto.cantidad), 0),
+            total: totalIns >= 1500 ? totalIns : totalIns + 399,
             nombre: nombre,
             paterno: paterno,
             materno: materno,

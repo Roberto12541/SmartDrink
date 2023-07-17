@@ -5,9 +5,7 @@ import CartItem from "../CartItem/CartItem.jsx";
 import CartEmpty from "../../assets/cart_empty.png"
 
 const Cart = () => {
-    const { carrito, vaciarCarrito } = useContext(CarritoContext);
-    const { cantidadTotal } = useContext(CarritoContext);
-    const { total } = useContext(CarritoContext)
+    const { carrito, vaciarCarrito, cantidadTotal, total } = useContext(CarritoContext);
 
     if (cantidadTotal === 0) {
         return (
@@ -18,7 +16,6 @@ const Cart = () => {
                             <header className="text-center">
                                 <h1 className="text-xl font-bold text-gray-900 sm:text-3xl">Carrito de compras</h1>
                             </header>
-
                             <div className="mt-8 flex items-center flex-col gap-12">
                                 <img src={CartEmpty} alt="" className="w-64" />
                                 <h2 className="text-2xl text-gray-600">No hay productos en el carrito.</h2>
@@ -41,19 +38,25 @@ const Cart = () => {
 
                     <div className="mt-8">
                         <ul className="space-y-4">
-
                             {
                                 carrito.map(producto => <CartItem key={producto.id} {...producto} />)
                             }
-
                         </ul>
 
                         <div className="mt-8 flex justify-end border-t border-gray-100 pt-8">
-                            <div className="w-screen max-w-lg space-y-4">
+                            <div className="w-screen max-w-lg space-y-2">
+                                <dl className="space-y-0.5 text-sm text-gray-700">
+                                    <div className="flex justify-between !text-base font-medium">
+                                        <dt>Costo de instalación </dt>
+                                        <dd className={total >= 1500 ? "line-through" : ''}>$399</dd>
+                                    </div>
+                                </dl>
                                 <dl className="space-y-0.5 text-sm text-gray-700">
                                     <div className="flex justify-between !text-base font-medium">
                                         <dt>Total</dt>
-                                        <dd>$ {total}</dd>
+                                        <dd>$ 
+                                            {total >= 1500 ? total : total + 399}
+                                        </dd>
                                     </div>
                                 </dl>
 
