@@ -48,7 +48,12 @@ const Cart = () => {
                                 <dl className="space-y-0.5 text-sm text-gray-700">
                                     <div className="flex justify-between !text-base font-medium">
                                         <dt>Costo de instalación </dt>
-                                        <dd className={total >= 1500 ? "line-through" : ''}>$399</dd>
+                                        {
+                                            total >= 1500 ? 
+                                                <dd><span className="text-green-700 no-underline">Gratis </span><span className="line-through">$399</span></dd>
+                                                :
+                                                <dd>$399</dd>
+                                        }
                                     </div>
                                 </dl>
                                 <dl className="space-y-0.5 text-sm text-gray-700">
