@@ -1,7 +1,7 @@
 import miguel from '../../assets/perfil-miguel.jpeg'
 import roberto from '../../assets/perfil-roberto.jpeg'
 import marco from '../../assets/perfil-marco.jpeg'
-import luis from '../../assets/perfil-luis.jpeg'
+import luis from '../../assets/perfil-luis.jpg'
 const Team = () => {
     return (
         <section className="text-white body-font bg-black">
