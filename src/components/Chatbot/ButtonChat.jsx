@@ -12,7 +12,7 @@ const ButtonChat = () => {
         <div className="">
             {
                 chat &&
-                <div className='fixed right-1 bottom-28 z-50'>
+                <div className='fixed right-1 bottom-28 z-50 px-1'>
                     <Chat />
                 </div>
             }
