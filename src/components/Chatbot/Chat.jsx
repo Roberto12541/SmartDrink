@@ -10,7 +10,7 @@ const theme = {
     botBubbleColor: '#8ea3bc',
     botFontColor: '#fff',
     userBubbleColor: '#f1f0f0',
-    userFontColor: '#fff',
+    userFontColor: '#000000',
 }
 
 export default class Chat extends Component {
@@ -22,8 +22,31 @@ export default class Chat extends Component {
                         {
                             id: 'Inicio',
                             message: '¡Hola! 🙋🏻 Soy SmartBot, tu asistente virtual de  SmartDrink. ¿Cual es tu nombre?',
-                            end: true
+                            trigger: 'Ingrese-nombre'
                         },
+                        {
+                            id: 'Ingrese-nombre',
+                            user: true,
+                            trigger: 'Respuesta-nombre'
+                        },
+                        {
+                            id: 'Respuesta-nombre',
+                            message: 'Hola {previousValue}',
+                            trigger: 'ayuda'
+                        },
+                        {
+                            id: 'ayuda',
+                            message: '¿En que puedo ayudarte?',
+                            trigger: 'opciones'
+                        },
+                        {
+                            id: 'opciones',
+                            options: [
+                                {value: 'Productos', label: 'Productos'},
+                                {value: 'Servicios', label: 'Servicios'},
+                                {value: 'Contacto', label: 'Contacto'}
+                            ]
+                        }
                     ]} />
             </ThemeProvider>
         )
