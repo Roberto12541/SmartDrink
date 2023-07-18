@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom'
-import miguel from '../../assets/perfil-miguel.jpeg'
-import roberto from '../../assets/perfil-roberto.jpeg'
-import marco from '../../assets/perfil-marco.jpeg'
-import luis from '../../assets/perfil-luis.jpeg'
+
 const PromoProducts = () => {
   return (
     <div className='mx-11 mt-20 flex'>
@@ -13,7 +10,7 @@ const PromoProducts = () => {
         </div>
         
         <div className="">
-            <a href="/productos"><img className='rounded-2xl ' src={miguel} alt="" /></a>
+            <a href="/productos"><img className='rounded-2xl ' src="" alt="" /></a>
             
         </div>
 

@@ -1,7 +1,7 @@
 import miguel from '../../assets/perfil-miguel.jpeg'
 import roberto from '../../assets/perfil-roberto.jpeg'
 import marco from '../../assets/perfil-marco.jpeg'
-import luis from '../../assets/perfil-luis.jpeg'
+import luis from '../../assets/perfil-luis.jpg'
 const Team = () => {
     return (
         <section className="text-white body-font bg-black">
@@ -17,7 +17,8 @@ const Team = () => {
                             <div className="flex-grow sm:pl-8">
                                 <h2 className="title-font font-medium text-lg text-white">Miguel Ángel Chan V.</h2>
                                 <h3 className="text-gray-500 mb-3">Lider de proyecto</h3>
-                                <span className="inline-flex">
+                                <p className="text-justify text-sm">Encargado de planificar, direccionar, supervisar el proceso de construcción, implementación y eliminación de errores de códigos.</p>
+                                <br></br><span className="inline-flex">
                                     <a href='https://www.facebook.com/macv2002' target='_blank' className="text-gray-500">
                                         <svg fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-5 h-5" viewBox="0 0 24 24">
                                             <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
@@ -43,7 +44,8 @@ const Team = () => {
                             <div className="flex-grow sm:pl-8">
                                 <h2 className="title-font font-medium text-lg text-white">Roberto Adrián  Miranda M.</h2>
                                 <h3 className="text-gray-500 mb-3">Desarrollador</h3>
-                                <span className="inline-flex">
+                                <p className="text-justify text-sm">Encargado de la creación de código limpio y eficiente , creación  del software teniendo las necesidades del usuario, revisar el funcionamiento, realizar mapeo de software trabajando en equipo con el equipo implicadas en el diseño.</p>
+                                <br></br><span className="inline-flex">
                                     <a href='https://www.facebook.com/profile.php?id=100010329643690' target='_blank' className="text-gray-500">
                                         <svg fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-5 h-5" viewBox="0 0 24 24">
                                             <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
@@ -68,9 +70,9 @@ const Team = () => {
                             <img alt="team" className="flex-shrink-0 rounded-full w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={marco} />
                             <div className="flex-grow sm:pl-8">
                                 <h2 className="title-font font-medium text-lg text-white">Marco Antonio Torres L.</h2>
-                                <h3 className="text-gray-500 mb-3">Diseñador de interfaz de usuario
-</h3>
-                                <span className="inline-flex">
+                                <h3 className="text-gray-500 mb-3">Diseñador de interfaz de usuario</h3>
+                                <p className="text-justify text-sm">Recopilación y evaluación de los requisitos de los usuarios, Ilustrar ideas de diseño con guiones gráficos, flujos de procesos y mapas de sitios.</p>
+                                <br></br><span className="inline-flex">
                                     <a href='https://www.facebook.com/profile.php?id=100082778165701' target='_blank' className="text-gray-500">
                                         <svg fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-5 h-5" viewBox="0 0 24 24">
                                             <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
@@ -95,7 +97,8 @@ const Team = () => {
                             <img alt="team" className="flex-shrink-0     w-48 h-48 object-cover object-center sm:mb-0 mb-4 rounded-full" src={luis} />
                             <div className="flex-grow sm:pl-8">
                                 <h2 className="title-font font-medium text-lg text-white">José Luis Oro C.</h2>
-                                <h3 className="text-gray-500 mb-3">Diseñador</h3><br></br>
+                                <h3 className="text-gray-500 mb-3">Diseñador</h3>
+                                <p className="text-justify text-sm">Analizar las necesidades de los usuarios y luego diseñar, probar y desarrollar programas para cubrirlas.</p><br></br>
                                 <span className="inline-flex">
                                     <a href='' className="text-gray-500">
                                         <svg fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-5 h-5" viewBox="0 0 24 24">
