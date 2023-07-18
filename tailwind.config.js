@@ -17,10 +17,17 @@ export default {
           '100%': {
             transform: 'translateY(0%)'
           }
+        },
+        ping: {
+          '75%, 100%': {
+            transform: 'scale(1.1)',
+            opacity: '0.9',
+          }
         }
       },
       animation: {
         aparecer: 'aparecer 400ms ease-in-out',
+        // ping: 'animation-ping 400ms ease-in-out'
       }
     }
   },
