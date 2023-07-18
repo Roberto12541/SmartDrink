@@ -39,7 +39,7 @@ function App() {
                 <><Carrusel /><ButtonChat /><Promo /><BannerThree /><Pricing /><PromoProducts/> <PromoService /><AppSection /><Team /><BannerTwo /><Footer /></>
               } />
               <Route path='/servicios' element={
-                <><Pricing /><Comparation />  <AppSection /><Footer /></>
+                <><Pricing /><ButtonChat /><Comparation />  <AppSection /><Footer /></>
               } />
               <Route path='/checkout' element={
                 <><Checkout /><Footer /></>
@@ -48,7 +48,7 @@ function App() {
                 <><Checkout /> <Footer /></>
               } />
               <Route path='/cart' element={
-                <><Cart /><Footer /></>
+                <><Cart /><ButtonChat /><Footer /></>
               } />
               <Route path='/login' element={
                 <><Login /><Footer /></>
@@ -57,19 +57,19 @@ function App() {
                 <><Register /><Footer /></>
               } />
               <Route path='/productos' element={
-                <><ItemListContainer /><Footer /></>
+                <><ItemListContainer /><ButtonChat /><Footer /></>
               } />
               <Route path='/productos/:categoria' element={
-                <><ItemListContainer /><Footer /></>
+                <><ItemListContainer /><ButtonChat /><Footer /></>
               } />
               <Route path='/producto/:producto' element={
-                <><ProductDetails /><Footer /></>
+                <><ProductDetails /><ButtonChat /><Footer /></>
               } />
               <Route path='/search/:busqueda?' element={
-                <><SearchContainer /><Footer /></>
+                <><SearchContainer /><ButtonChat /><Footer /></>
               } />
               <Route path='/nosotros' element={
-                <><AboutUs /><Team /><Contacto /><Footer /></>
+                <><AboutUs /><Team /><ButtonChat /><Contacto /><Footer /></>
               } />
               <Route path='*' element={
                 <><NoFound /></>
