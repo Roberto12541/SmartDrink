@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom'
-import miguel from '../../assets/perfil-miguel.jpeg'
-import roberto from '../../assets/perfil-roberto.jpeg'
-import marco from '../../assets/perfil-marco.jpeg'
-import luis from '../../assets/perfil-luis.jpeg'
+
 const PromoProducts = () => {
   return (
     <div className='mx-11 mt-20 flex'>
