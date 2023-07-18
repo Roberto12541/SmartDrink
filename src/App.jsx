@@ -25,7 +25,7 @@ import Register from './components/Register/Register.jsx';
 import PromoService from './components/Section/PromoService.jsx';
 import PromoProducts from './components/Section/PromoProducts.jsx';
 // import Chat from './components/Chatbot/Chat.jsx';
-import ButtonChat from './components/Chatbot/ButtonChat.jsx';
+// import ButtonChat from './components/Chatbot/ButtonChat.jsx';
 
 function App() {
   return (
@@ -36,7 +36,7 @@ function App() {
             <Navbar />
             <Routes>
               <Route path='/' element={
-                <><Carrusel /><ButtonChat /><Promo /><BannerThree /><Pricing /><PromoProducts/> <PromoService /><AppSection /><Team /><BannerTwo /><Footer /></>
+                <><Carrusel /><Promo /><BannerThree /><Pricing /><PromoProducts /> <PromoService /><AppSection /><Team /><BannerTwo /><Footer /></>
               } />
               <Route path='/servicios' element={
                 <><Pricing /><Comparation />  <AppSection /><Footer /></>
