@@ -13,7 +13,7 @@ const PromoProducts = () => {
         </div>
         
         <div className="">
-            <a href="/productos"><img className='rounded-2xl ' src={miguel} alt="" /></a>
+            <a href="/productos"><img className='rounded-2xl ' src="" alt="" /></a>
             
         </div>
 
