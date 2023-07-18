@@ -14,7 +14,7 @@ const Pricing = () => {
                             <div className="flex-1">
                                 <h3 className="text-xl font-semibold text-neutral-600">SmartBasic</h3>
                                 <p className="flex items-baseline mt-4 text-neutral-600">
-                                    <span className="text-5xl font-bold tracking-tight">$9,200</span>
+                                    <span className="text-5xl font-bold tracking-tight">$29,999</span>
                                     <span className="ml-1 text-xl font-semibold">MXN</span>
                                 </p>
                                 <p className="mt-6 text-gray-500 text-justify">Con el paquete SmartBasic tendrás acceso a tutoriales detallados
@@ -61,7 +61,7 @@ const Pricing = () => {
                             <div className="relative flex-1">
                                 <h3 className="text-xl font-semibold text-white">SmartInter</h3>
                                 <p className="flex items-baseline mt-4 text-white">
-                                    <span className="text-5xl font-bold tracking-tight text-white">$11,400</span>
+                                    <span className="text-5xl font-bold tracking-tight text-white">$37,000</span>
                                     <span className="ml-1 text-xl font-semibold text-white">MXN</span>
                                 </p>
                                 <p className="mt-6 text-white text-solitud line-clamp-5 text-justify">Con el paquete SmartInter obtendrás la capacitación
@@ -117,7 +117,7 @@ const Pricing = () => {
                             <div className="flex-1">
                                 <h3 className="text-xl font-semibold text-neutral-600">SmartPro</h3>
                                 <p className="flex items-baseline mt-4 text-neutral-600">
-                                    <span className="text-5xl font-bold tracking-tight">$13,000</span>
+                                    <span className="text-5xl font-bold tracking-tight">$50,000</span>
                                     <span className="ml-1 text-xl font-semibold">MXN</span>
                                 </p>
                                 <p className="mt-6 text-gray-500 line-clamp-5 text-justify">Con el paquete SmartPro podrás elegir el diseño de tu preferencia
