@@ -42,11 +42,26 @@ export default class Chat extends Component {
                         {
                             id: 'opciones',
                             options: [
-                                {value: 'Productos', label: 'Productos'},
-                                {value: 'Servicios', label: 'Servicios'},
-                                {value: 'Contacto', label: 'Contacto'}
+                                {value: 'Productos', label: 'Productos', trigger: 'Productos'},
+                                {value: 'Servicios', label: 'Servicios', trigger: 'Servicios'},
+                                {value: 'Contacto', label: 'Contacto', trigger: 'Contacto'}
                             ]
-                        }
+                        },
+                        {
+                            id: 'Productos',
+                            message: 'Productos',
+                            end: true
+                        },
+                        {
+                            id: 'Servicios',
+                            message: 'Servicios',
+                            end: true
+                        },
+                        {
+                            id: 'Contacto',
+                            message: 'Contacto',
+                            end: true
+                        },
                     ]} />
             </ThemeProvider>
         )
