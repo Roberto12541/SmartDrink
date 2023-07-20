@@ -18,6 +18,14 @@ export default {
             transform: 'translateY(0%)'
           }
         },
+        pulso: {
+          '50%': {
+            transform: 'scale(1.1)'
+          },
+          '100%': {
+            transform: 'scale(1.0)'
+          },
+        },
         ping: {
           '75%, 100%': {
             transform: 'scale(1.1)',
@@ -27,6 +35,7 @@ export default {
       },
       animation: {
         aparecer: 'aparecer 400ms ease-in-out',
+        pulso: 'pulso 1s ease-in-out infinite',
         // ping: 'animation-ping 400ms ease-in-out'
       }
     }

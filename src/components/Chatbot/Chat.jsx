@@ -1,9 +1,8 @@
-// import React, { Component } from "react";
 import Chatbot from 'react-simple-chatbot'
 import { ThemeProvider } from 'styled-components';
 import { useContext } from 'react';
 import { LoginContext } from '../../context/LoginContext';
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const theme = {
     background: '#f5f8fb',
@@ -18,16 +17,23 @@ const theme = {
 
 const Chat = () => {
     const { datos, login } = useContext(LoginContext);
-    // const history = useNavigate();
+    const history = useNavigate();
 
     return (
         <ThemeProvider theme={theme}>
             <Chatbot
+                recognitionEnable = {true}
+                recognitionLang = {'es'}
+                // cache = {true}
+                headerTitle="SmartBot"
+                userAvatar="https://cdn-icons-png.flaticon.com/512/6596/6596121.png"
+                botAvatar="https://cdn1.iconfinder.com/data/icons/robots-avatars-set/354/Robot_avatar___robot_robo_avatar_chatbot_chat-512.png"
                 steps={[
                     {
                         id: 'Saludo',
-                        message: `¡Hola!👋 ${ login ? datos[0].name : ''}`,
-                        trigger: login ? 'ayuda' : 'Presentacion'
+                        message: `¡Hola!👋 ${login ? datos[0].name : ''}`,
+                        trigger: login ? 'ayuda' : 'Presentacion',
+                        hideInput: true,
                     },
                     {
                         id: 'Presentacion',
@@ -58,13 +64,15 @@ const Chat = () => {
                     },
                     {
                         id: 'Respuesta-nombre',
-                        message: 'Hola {previousValue}',
-                        trigger: 'ayuda'
+                        message: '¡Hola! {previousValue}',
+                        trigger: 'ayuda',
+                        hideInput: true
                     },
                     {
                         id: 'ayuda',
                         message: '¿En que puedo ayudarte?',
-                        trigger: 'opciones'
+                        trigger: 'opciones',
+                        hideInput: true
                     },
                     {
                         id: 'opciones',
@@ -72,7 +80,14 @@ const Chat = () => {
                             { value: 'Productos', label: 'Productos', trigger: 'Productos' },
                             { value: 'Servicios', label: 'Servicios', trigger: 'Opciones-Planes' },
                             { value: 'Contacto', label: 'Contacto', trigger: 'Contacto' }
-                        ]
+                        ],
+                        hideInput: true
+                    },
+                    {
+                        id: 'Productos',
+                        message: '¿Qué productos deseas consultar?',
+                        trigger: 'opciones-productos',
+                        hideInput: true
                     },
                     {
                         id: 'Opciones-Planes',
@@ -90,13 +105,13 @@ const Chat = () => {
                     {
                         id: 'Comprar/Cancelar',
                         options: [
-                            { value: 'Comprar', label: 'Comprar'},
+                            { value: 'Comprar', label: 'Comprar', trigger: () => login ? history('/checkout/9200/SmartBasic') : history('/login') },
                             { value: 'Volver', label: 'Volver', trigger: 'ayuda' }
                         ]
                     },
                     {
                         id: 'SmartBasic',
-                        message: 'SmartBasic: Con el paquete SmartBasic tendrás acceso a tutoriales detallados para un mejor manejo de tu Drinker y soporte básico para dudas o preguntas.',
+                        message: 'Con el paquete SmartBasic tendrás acceso a tutoriales detallados para un mejor manejo de tu Drinker y soporte básico para dudas o preguntas.',
                         trigger: 'SmartBasic-Precio'
                     },
                     {
